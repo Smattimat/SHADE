@@ -1,0 +1,5 @@
+{
+   "1" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Un altro foglio strappato..." },
+   "2" : {"type":"image","name": "appuntiuno.png" },
+   "3": {"type":"dialogue","name": "Player","Face":"Sad","Text":"Cavie umane... Forse inizio a ricordare qualcosa..." }   
+}
