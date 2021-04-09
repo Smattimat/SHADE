@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hai vinto-2.ogg-a8bbb977498e7a23660e47a14df4362a.oggstr"
+
+[deps]
+
+source_file="res://Asset/Musica/hai vinto-2.ogg"
+dest_files=[ "res://.import/hai vinto-2.ogg-a8bbb977498e7a23660e47a14df4362a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

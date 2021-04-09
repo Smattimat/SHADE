@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/song 4 boss-inferno.ogg-ac0e76a9e4cb51614963a83ddc4279b5.oggstr"
+
+[deps]
+
+source_file="res://Asset/Musica/song 4 boss-inferno.ogg"
+dest_files=[ "res://.import/song 4 boss-inferno.ogg-ac0e76a9e4cb51614963a83ddc4279b5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/song 3 -primavera-estate.ogg-6275d3482b4d14bcc22229c0f854acde.oggstr"
+
+[deps]
+
+source_file="res://Asset/Musica/song 3 -primavera-estate.ogg"
+dest_files=[ "res://.import/song 3 -primavera-estate.ogg-6275d3482b4d14bcc22229c0f854acde.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

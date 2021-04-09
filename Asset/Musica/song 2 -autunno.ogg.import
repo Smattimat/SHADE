@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/song 2 -autunno.ogg-f3007fed2010fb4265b9118fc145e1b6.oggstr"
+
+[deps]
+
+source_file="res://Asset/Musica/song 2 -autunno.ogg"
+dest_files=[ "res://.import/song 2 -autunno.ogg-f3007fed2010fb4265b9118fc145e1b6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

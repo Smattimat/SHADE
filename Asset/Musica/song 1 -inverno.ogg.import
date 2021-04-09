@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/song 1 -inverno.ogg-5b11b105153c1b5dc03a440336d9cc6c.oggstr"
+
+[deps]
+
+source_file="res://Asset/Musica/song 1 -inverno.ogg"
+dest_files=[ "res://.import/song 1 -inverno.ogg-5b11b105153c1b5dc03a440336d9cc6c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
