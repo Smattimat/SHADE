@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Objects/Main.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://AutoTiles/SpringAutoTile.tres" type="TileSet" id=3]
+[ext_resource path="res://Objects/WorldComplete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/LevelCommands2.gd" type="Script" id=5]
+[ext_resource path="res://Objects/InvisibleDiaTrigger.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Note.tscn" type="PackedScene" id=7]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+ChoiceN = 1
+
+[node name="LevelCommands" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+LevelAt = "PrimDue"
+
+[node name="Base" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+z_index = -100
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( -262152, 0, 196608, -262151, 0, 196609, -262150, 0, 7, -196614, 0, 65541, -131078, 0, 65541, -65544, 0, 6, -65543, 0, 196609, -65542, 0, 65543, -8, 0, 65541, 65528, 0, 65542, 65529, 0, 196609, 65530, 0, 196610, 196607, 1, 0, 131072, 1, 0, 131081, 0, 5, 131083, 0, 196608, 131084, 0, 7, 262136, 0, 196608, 262137, 0, 196609, 262138, 0, 196609, 262139, 0, 196609, 262140, 0, 196609, 262141, 0, 196609, 262142, 0, 196609, 262143, 0, 196609, 196608, 0, 196609, 196609, 0, 196609, 196610, 0, 196609, 196611, 0, 196609, 196612, 0, 196609, 196613, 0, 196609, 196614, 0, 196609, 196615, 0, 7, 196617, 0, 65541, 196620, 0, 65541, 262151, 0, 65542, 262152, 0, 196609, 262153, 0, 65543, 262156, 0, 65542, 262157, 0, 196609, 262158, 0, 196609, 262159, 0, 196609, 262160, 0, 196609, 262161, 0, 196609, 262162, 0, 196609, 262163, 0, 196610 )
+
+[node name="LayerTwo" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+z_index = 30
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 196606, 1, 0 )
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+
+[node name="WorldComplete" parent="." instance=ExtResource( 4 )]
+position = Vector2( 192, 128 )
+next_world = "res://Levels/Level1T_Main.tscn"
+levelN = 20
+move_to = Vector2( 0, 20 )
+speed = 0.7
+
+[node name="Choice" parent="." instance=ExtResource( 6 )]
+position = Vector2( -5.3454, 124.726 )
+OneTime = true
+NoSkip = true
+
+[node name="Note" parent="." instance=ExtResource( 7 )]
+position = Vector2( 106.908, 128.289 )
+DialogueNumber = "PDue"
+IsChoiceBased = true
