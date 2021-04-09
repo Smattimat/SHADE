@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Screens/Menuino.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Scritte/ScrittaResume.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Scritte/ScrittaRetry,png.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Scritte/ScrittaOptions.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/VideoTerminalScreen.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Asset/Scritte/ScrittaExit.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 192, 64 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 192, 64 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 192, 64 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 192, 64 )
+
+[node name="Menuino" type="Control"]
+pause_mode = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlackOvelay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.0980392, 0.0980392, 0.0980392, 0.752941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="BlackOvelay"]
+margin_left = 416.0
+margin_top = 32.0
+margin_right = 864.0
+margin_bottom = 672.0
+color = Color( 0.054902, 0.0431373, 0.129412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="BlackOvelay/ColorRect"]
+margin_left = 64.0
+margin_top = 32.0
+margin_right = 384.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "PAUSE MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="TouchScreenButton" parent="BlackOvelay/ColorRect"]
+position = Vector2( 80, 128 )
+scale = Vector2( 0.75, 0.75 )
+z_index = 1
+normal = ExtResource( 2 )
+shape = SubResource( 2 )
+
+[node name="Retry" type="TouchScreenButton" parent="BlackOvelay/ColorRect"]
+position = Vector2( 80, 256 )
+scale = Vector2( 0.75, 0.75 )
+normal = ExtResource( 3 )
+shape = SubResource( 3 )
+
+[node name="Options" type="TouchScreenButton" parent="BlackOvelay/ColorRect"]
+position = Vector2( 80, 384 )
+scale = Vector2( 0.75, 0.75 )
+z_index = 1
+normal = ExtResource( 4 )
+shape = SubResource( 4 )
+
+[node name="ToMenu" type="TouchScreenButton" parent="BlackOvelay/ColorRect"]
+position = Vector2( 80, 512 )
+scale = Vector2( 0.75, 0.75 )
+z_index = 1
+normal = ExtResource( 6 )
+shape = SubResource( 5 )
+[connection signal="pressed" from="BlackOvelay/ColorRect/Resume" to="." method="_on_Resume_pressed"]

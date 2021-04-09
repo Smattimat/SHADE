@@ -1,0 +1,93 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Asset/Buttons/left.png" type="Texture" id=1]
+[ext_resource path="res://Asset/Buttons/right.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Buttons/Change_color.png" type="Texture" id=4]
+[ext_resource path="res://Screens/HUD.gd" type="Script" id=5]
+[ext_resource path="res://Asset/Buttons/X.png" type="Texture" id=6]
+[ext_resource path="res://Screens/Menuino.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Screens/GameOverScreen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Screens/NarrationInterface.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Screens/ColorSelect.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Screens/EndLevelScreen.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 128 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64, 64 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 50, 50 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 120, 120 )
+
+[node name="HUD" type="Node"]
+pause_mode = 2
+script = ExtResource( 5 )
+
+[node name="RightBox" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -544.0
+margin_bottom = 704.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="TouchScreenButton" parent="RightBox"]
+position = Vector2( 320, 544 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Left" type="TouchScreenButton" parent="RightBox"]
+position = Vector2( 128, 544 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 1 )
+shape = SubResource( 1 )
+
+[node name="Box" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="TouchScreenButton" parent="Box"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.5, 0.496124 )
+normal = ExtResource( 6 )
+shape = SubResource( 2 )
+
+[node name="Jump" type="TouchScreenButton" parent="Box"]
+position = Vector2( 0, 704 )
+rotation = -1.5708
+scale = Vector2( 1.6, 1.6 )
+normal = ExtResource( 2 )
+shape = SubResource( 3 )
+
+[node name="Color2" type="TouchScreenButton" parent="Box"]
+position = Vector2( 32, 416 )
+scale = Vector2( 0.7, 0.7 )
+normal = ExtResource( 4 )
+shape = SubResource( 4 )
+
+[node name="Menuino" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="GameOverScreen" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="NarrationInterface" parent="." instance=ExtResource( 9 )]
+
+[node name="ColorSelect" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="EndLevelScreen" parent="." instance=ExtResource( 11 )]
+visible = false
+[connection signal="pressed" from="Box/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Box/Color2" to="." method="_on_Color2_pressed"]

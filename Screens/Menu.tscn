@@ -1,0 +1,845 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://Screens/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Scritte/ScrittaOptions.png" type="Texture" id=2]
+[ext_resource path="res://Screens/Levels2.gd" type="Script" id=3]
+[ext_resource path="res://Asset/Musica/song 7.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Asset/Scritte/Shade TITLE.png" type="Texture" id=5]
+[ext_resource path="res://Asset/Scritte/ScrittaExit.png" type="Texture" id=6]
+[ext_resource path="res://Screens/Options.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Asset/Buttons/left.png" type="Texture" id=8]
+[ext_resource path="res://Asset/Buttons/right.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/Terminal2.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Asset/Sfondi/Estate/Sfondo_Estate_Stretchato.png" type="Texture" id=12]
+[ext_resource path="res://Asset/Buttons/BTN1.png" type="Texture" id=13]
+[ext_resource path="res://Asset/Scritte/ScrittaPlay.png" type="Texture" id=14]
+[ext_resource path="res://Asset/Buttons/BTN2.png" type="Texture" id=15]
+[ext_resource path="res://Asset/Buttons/BTN3.png" type="Texture" id=16]
+[ext_resource path="res://Asset/Buttons/BTN4.png" type="Texture" id=17]
+[ext_resource path="res://Screens/Levels1.gd" type="Script" id=18]
+[ext_resource path="res://Asset/Sfondi/Primavera/prova_sfondo.png" type="Texture" id=19]
+[ext_resource path="res://Screens/LoadingScreen.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Asset/Buttons/BTN2L.png" type="Texture" id=21]
+[ext_resource path="res://Screens/lvlBut.gd" type="Script" id=22]
+[ext_resource path="res://Asset/Buttons/BTN3L.png" type="Texture" id=23]
+[ext_resource path="res://Asset/Buttons/BTN1L.png" type="Texture" id=24]
+[ext_resource path="res://Asset/Buttons/BTN5L.png" type="Texture" id=25]
+[ext_resource path="res://Asset/Buttons/BTN4L.png" type="Texture" id=26]
+[ext_resource path="res://Asset/Player & Person/Cubo Others Red.png" type="Texture" id=27]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 48 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 48, 48 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 48, 48 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "BackToLevels1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Levels2:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1408, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Levels1:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1376, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("MenuContainer/VBoxContainer/Gioca:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MenuContainer/VBoxContainer/Gioca:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MenuContainer/VBoxContainer/Esci:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuContainer/VBoxContainer/Esci:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MenuContainer/VBoxContainer/Gioca:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1184, -136 ), Vector2( -192, -136 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("MenuContainer/VBoxContainer/Esci:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 736, 184 ), Vector2( -192, 184 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Levels1:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1408, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MenuContainer:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1376, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MenuContainer/VBoxContainer/Gioca:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -192, -136 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuContainer/VBoxContainer/Gioca:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MenuContainer/VBoxContainer/Options:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -192, 24 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("MenuContainer/VBoxContainer/Options:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("MenuContainer/VBoxContainer/Esci:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -192, 184 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("MenuContainer/VBoxContainer/Esci:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Levels1:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1376, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Levels2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1408, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Options:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1408, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MenuContainer:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1312, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MenuContainer/VBoxContainer/Gioca:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -192, -136 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuContainer/VBoxContainer/Options:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -192, 24 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MenuContainer/VBoxContainer/Esci:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -192, 184 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("MenuContainer/VBoxContainer/Gioca:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("MenuContainer/VBoxContainer/Options:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("MenuContainer/VBoxContainer/Esci:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+tracks/0/type = "value"
+tracks/0/path = NodePath("MenuContainer:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1312, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Options:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1376, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+tracks/0/type = "value"
+tracks/0/path = NodePath("MenuContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1376, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Levels1:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1408, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Menu" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Levels2" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1376.0
+margin_right = 1376.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back2" type="TouchScreenButton" parent="Levels2"]
+scale = Vector2( 0.96, 0.96 )
+normal = ExtResource( 8 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Levels2"]
+margin_left = 480.0
+margin_top = 40.0
+margin_right = 780.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 11 )
+text = "Worlds 4-6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inverno" type="Sprite" parent="Levels2"]
+position = Vector2( 640, 208 )
+texture = ExtResource( 19 )
+
+[node name="InvUno" type="TouchScreenButton" parent="Levels2/Inverno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -448, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 24 )
+script = ExtResource( 22 )
+levelN = 16
+
+[node name="invDue" type="TouchScreenButton" parent="Levels2/Inverno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -256, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 21 )
+script = ExtResource( 22 )
+levelN = 17
+
+[node name="InvTre" type="TouchScreenButton" parent="Levels2/Inverno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -64, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 23 )
+script = ExtResource( 22 )
+levelN = 18
+
+[node name="invQuattro" type="TouchScreenButton" parent="Levels2/Inverno" groups=[
+"LevelButtons",
+]]
+position = Vector2( 128, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 26 )
+script = ExtResource( 22 )
+levelN = 19
+
+[node name="InvCinque" type="TouchScreenButton" parent="Levels2/Inverno" groups=[
+"LevelButtons",
+]]
+position = Vector2( 320, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 25 )
+script = ExtResource( 22 )
+levelN = 20
+
+[node name="Paradiso" type="Sprite" parent="Levels2"]
+position = Vector2( 640, 400 )
+texture = ExtResource( 19 )
+
+[node name="ParUno" type="TouchScreenButton" parent="Levels2/Paradiso" groups=[
+"LevelButtons",
+]]
+position = Vector2( -448, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 24 )
+script = ExtResource( 22 )
+Par = true
+
+[node name="ParDue" type="TouchScreenButton" parent="Levels2/Paradiso" groups=[
+"LevelButtons",
+]]
+position = Vector2( -256, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 21 )
+script = ExtResource( 22 )
+levelN = 2
+Par = true
+
+[node name="ParTre" type="TouchScreenButton" parent="Levels2/Paradiso" groups=[
+"LevelButtons",
+]]
+position = Vector2( -64, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 23 )
+script = ExtResource( 22 )
+levelN = 3
+Par = true
+
+[node name="ParQuattro" type="TouchScreenButton" parent="Levels2/Paradiso" groups=[
+"LevelButtons",
+]]
+position = Vector2( 128, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 26 )
+script = ExtResource( 22 )
+levelN = 4
+Par = true
+
+[node name="ParCinque" type="TouchScreenButton" parent="Levels2/Paradiso" groups=[
+"LevelButtons",
+]]
+position = Vector2( 320, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 25 )
+script = ExtResource( 22 )
+levelN = 5
+Par = true
+
+[node name="Inferno" type="Sprite" parent="Levels2"]
+position = Vector2( 640, 592 )
+texture = ExtResource( 19 )
+
+[node name="InfUno" type="TouchScreenButton" parent="Levels2/Inferno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -448, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 24 )
+script = ExtResource( 22 )
+Inf = true
+
+[node name="InfDue" type="TouchScreenButton" parent="Levels2/Inferno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -256, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 21 )
+script = ExtResource( 22 )
+levelN = 2
+Inf = true
+
+[node name="InfTre" type="TouchScreenButton" parent="Levels2/Inferno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -64, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 23 )
+script = ExtResource( 22 )
+levelN = 3
+Inf = true
+
+[node name="InfQuattro" type="TouchScreenButton" parent="Levels2/Inferno" groups=[
+"LevelButtons",
+]]
+position = Vector2( 128, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 26 )
+script = ExtResource( 22 )
+levelN = 4
+Inf = true
+
+[node name="InfCinque" type="TouchScreenButton" parent="Levels2/Inferno" groups=[
+"LevelButtons",
+]]
+position = Vector2( 320, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 25 )
+script = ExtResource( 22 )
+levelN = 5
+Inf = true
+
+[node name="Levels1" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1376.0
+margin_right = 1376.0
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="TouchScreenButton" parent="Levels1"]
+scale = Vector2( 0.96, 0.96 )
+normal = ExtResource( 8 )
+shape = SubResource( 2 )
+
+[node name="Next" type="TouchScreenButton" parent="Levels1"]
+position = Vector2( 1184, 0 )
+scale = Vector2( 1, 0.96 )
+normal = ExtResource( 10 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="Levels1"]
+margin_left = 480.0
+margin_top = 40.0
+margin_right = 800.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 11 )
+text = "Worlds 1-3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Primavera" type="Sprite" parent="Levels1"]
+position = Vector2( 640, 208 )
+texture = ExtResource( 19 )
+
+[node name="PrimUno" type="TouchScreenButton" parent="Levels1/Primavera" groups=[
+"LevelButtons",
+]]
+position = Vector2( -448, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 13 )
+script = ExtResource( 22 )
+
+[node name="PrimDue" type="TouchScreenButton" parent="Levels1/Primavera" groups=[
+"LevelButtons",
+]]
+position = Vector2( -256, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 15 )
+script = ExtResource( 22 )
+levelN = 2
+
+[node name="PrimTre" type="TouchScreenButton" parent="Levels1/Primavera" groups=[
+"LevelButtons",
+]]
+position = Vector2( -64, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 16 )
+script = ExtResource( 22 )
+levelN = 3
+
+[node name="PrimQuattro" type="TouchScreenButton" parent="Levels1/Primavera" groups=[
+"LevelButtons",
+]]
+position = Vector2( 128, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 17 )
+script = ExtResource( 22 )
+levelN = 4
+
+[node name="PrimCinque" type="TouchScreenButton" parent="Levels1/Primavera" groups=[
+"LevelButtons",
+]]
+position = Vector2( 320, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 25 )
+script = ExtResource( 22 )
+levelN = 5
+
+[node name="Estate" type="Sprite" parent="Levels1"]
+position = Vector2( 640, 400 )
+texture = ExtResource( 12 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EstUno" type="TouchScreenButton" parent="Levels1/Estate" groups=[
+"LevelButtons",
+]]
+position = Vector2( -448, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 24 )
+script = ExtResource( 22 )
+levelN = 6
+
+[node name="EstDue" type="TouchScreenButton" parent="Levels1/Estate" groups=[
+"LevelButtons",
+]]
+position = Vector2( -256, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 21 )
+script = ExtResource( 22 )
+levelN = 7
+
+[node name="EstTre" type="TouchScreenButton" parent="Levels1/Estate" groups=[
+"LevelButtons",
+]]
+position = Vector2( -64, -48 )
+scale = Vector2( 1.33333, 1 )
+normal = ExtResource( 23 )
+script = ExtResource( 22 )
+levelN = 8
+
+[node name="EstQuattro" type="TouchScreenButton" parent="Levels1/Estate" groups=[
+"LevelButtons",
+]]
+position = Vector2( 128, -48 )
+scale = Vector2( 1.33333, 1.08334 )
+normal = ExtResource( 26 )
+script = ExtResource( 22 )
+levelN = 9
+
+[node name="EstCinque" type="TouchScreenButton" parent="Levels1/Estate" groups=[
+"LevelButtons",
+]]
+position = Vector2( 320, -48 )
+scale = Vector2( 1.33333, 1.16667 )
+normal = ExtResource( 25 )
+script = ExtResource( 22 )
+levelN = 10
+
+[node name="Autunno" type="Sprite" parent="Levels1"]
+position = Vector2( 640, 592 )
+scale = Vector2( 0.996875, 1 )
+texture = ExtResource( 19 )
+
+[node name="AutUno" type="TouchScreenButton" parent="Levels1/Autunno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -449.404, -48 )
+scale = Vector2( 1.33438, 1 )
+normal = ExtResource( 24 )
+script = ExtResource( 22 )
+levelN = 11
+
+[node name="AutDue" type="TouchScreenButton" parent="Levels1/Autunno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -256.802, -48 )
+scale = Vector2( 1.33438, 1 )
+normal = ExtResource( 21 )
+script = ExtResource( 22 )
+levelN = 12
+
+[node name="AutTre" type="TouchScreenButton" parent="Levels1/Autunno" groups=[
+"LevelButtons",
+]]
+position = Vector2( -64.2006, -48 )
+scale = Vector2( 1.33438, 1 )
+normal = ExtResource( 23 )
+script = ExtResource( 22 )
+levelN = 13
+
+[node name="AutQuattro" type="TouchScreenButton" parent="Levels1/Autunno" groups=[
+"LevelButtons",
+]]
+position = Vector2( 128.401, -48 )
+scale = Vector2( 1.33751, 1 )
+normal = ExtResource( 26 )
+script = ExtResource( 22 )
+levelN = 14
+
+[node name="AutCinque" type="TouchScreenButton" parent="Levels1/Autunno" groups=[
+"LevelButtons",
+]]
+position = Vector2( 321.003, -48 )
+scale = Vector2( 1.33751, 1 )
+normal = ExtResource( 25 )
+script = ExtResource( 22 )
+levelN = 15
+
+[node name="Options" parent="." instance=ExtResource( 7 )]
+margin_left = 1376.0
+margin_right = 1376.0
+
+[node name="TryAlternativeFinal" type="TouchScreenButton" parent="Options"]
+position = Vector2( 32, 128 )
+scale = Vector2( 2, 1 )
+normal = ExtResource( 27 )
+
+[node name="MenuContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer"]
+margin_left = 640.0
+margin_top = 360.0
+margin_right = 640.0
+margin_bottom = 360.0
+
+[node name="Sprite" type="Sprite" parent="MenuContainer/VBoxContainer"]
+position = Vector2( 0, -240 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Gioca" type="TouchScreenButton" parent="MenuContainer/VBoxContainer"]
+position = Vector2( -192, -136 )
+normal = ExtResource( 14 )
+
+[node name="Options" type="TouchScreenButton" parent="MenuContainer/VBoxContainer"]
+position = Vector2( -192, 24 )
+normal = ExtResource( 2 )
+
+[node name="Esci" type="TouchScreenButton" parent="MenuContainer/VBoxContainer"]
+position = Vector2( -192, 184 )
+normal = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/BackToLevels1 = SubResource( 4 )
+"anims/FadeInMenù" = SubResource( 5 )
+anims/LevelsToMenu = SubResource( 6 )
+anims/NextLevels = SubResource( 7 )
+anims/OptionToMenu = SubResource( 8 )
+anims/SwipeToOption = SubResource( 9 )
+anims/ToLevels = SubResource( 10 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.0
+autoplay = true
+
+[node name="LoadingScreen" parent="." instance=ExtResource( 20 )]
+[connection signal="pressed" from="Levels2/Back2" to="." method="_on_Back2_pressed"]
+[connection signal="pressed" from="Levels1/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Levels1/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Levels1/Primavera/PrimUno" to="Levels1" method="_on_PrimUno_pressed"]
+[connection signal="pressed" from="Levels1/Primavera/PrimDue" to="Levels1" method="_on_PrimDue_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/Gioca" to="." method="_on_Gioca_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/Esci" to="." method="_on_Esci_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

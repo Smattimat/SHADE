@@ -1,0 +1,103 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Asset/Sfondi/background-1.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Terminal2.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Shaders/Color.shader" type="Shader" id=3]
+[ext_resource path="res://Asset/Buttons/right.png" type="Texture" id=4]
+[ext_resource path="res://Asset/Player & Person/Cubo Cazzo sketch style copy.png" type="Texture" id=5]
+[ext_resource path="res://Screens/DialogueBox.gd" type="Script" id=6]
+[ext_resource path="res://Asset/Buttons/X.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 48 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 3 )
+shader_param/color = Color( 0.45098, 0.2, 0.0509804, 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 3 )
+shader_param/color = Color( 0.45098, 0.2, 0.0509804, 1 )
+
+[sub_resource type="Animation" id=4]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Next/Next_sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.14, 1.14 ), Vector2( 1.14, 1e-05 ), Vector2( 1.14, 1.14 ) ]
+}
+
+[node name="DialogueBox" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = 416.0
+margin_right = -32.0
+margin_bottom = -16.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 1105.0
+margin_bottom = 275.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Place holder text prova prova"
+text = "Place holder text prova prova"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TouchScreenButton" parent="."]
+position = Vector2( 1120, 576 )
+scale = Vector2( 1.28, 1.28 )
+z_index = 100
+shape = SubResource( 1 )
+
+[node name="Next_sprite" type="Sprite" parent="Next"]
+material = SubResource( 2 )
+position = Vector2( 47.2656, 47.2656 )
+scale = Vector2( 1.14, 1.14 )
+texture = ExtResource( 4 )
+
+[node name="Exit" type="TouchScreenButton" parent="."]
+material = SubResource( 3 )
+position = Vector2( 1152, 448 )
+scale = Vector2( 0.5, 0.496 )
+normal = ExtResource( 7 )
+
+[node name="Speaker" type="Sprite" parent="."]
+position = Vector2( 192, 352 )
+scale = Vector2( 1.5625, 1.53125 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="CharTween" type="Tween" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Next hopp" = SubResource( 4 )
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="tween_completed" from="CharTween" to="." method="_on_CharTween_tween_completed"]

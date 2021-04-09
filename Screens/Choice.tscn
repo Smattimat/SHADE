@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/Terminal2.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Asset/Sfondi/background-1.png" type="Texture" id=2]
+[ext_resource path="res://Screens/Choice.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 128, 82 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 128, 82 )
+
+[node name="Choice" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlackOverlay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0980392, 0.0980392, 0.0980392, 0.564706 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="BlackOverlay"]
+margin_left = 224.0
+margin_top = 32.0
+margin_right = 1056.0
+margin_bottom = 416.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BlackOverlay/TextureRect"]
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 640.0
+margin_bottom = 192.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0.45098, 0.2, 0.0509804, 1 )
+bbcode_text = "Prova Prova text text"
+text = "Prova Prova text text"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paradise" type="TouchScreenButton" parent="BlackOverlay/TextureRect"]
+position = Vector2( 544, 192 )
+shape = SubResource( 1 )
+
+[node name="PLabel" type="Label" parent="BlackOverlay/TextureRect/Paradise"]
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.45098, 0.2, 0.0509804, 1 )
+text = "ojkhk"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hell" type="TouchScreenButton" parent="BlackOverlay/TextureRect"]
+position = Vector2( 32, 192 )
+shape = SubResource( 2 )
+
+[node name="hLabel" type="Label" parent="BlackOverlay/TextureRect/Hell"]
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.45098, 0.2, 0.0509804, 1 )
+text = "fsdfsddf"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="BlackOverlay/TextureRect/Paradise" to="." method="_on_Paradise_pressed"]
+[connection signal="pressed" from="BlackOverlay/TextureRect/Hell" to="." method="_on_Hell_pressed"]
