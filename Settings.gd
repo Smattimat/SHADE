@@ -2,7 +2,7 @@ extends Node
 
 var Level_File= "user://Level.save"
 
-var GameLevelAt=20
+var GameLevelAt=1
 var ParLevelAt=0
 var InfLevelAt=0
 
