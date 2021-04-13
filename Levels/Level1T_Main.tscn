@@ -69,7 +69,7 @@ stream = ExtResource( 8 )
 volume_db = -15.0
 
 [node name="WorldComplete" parent="." instance=ExtResource( 4 )]
-position = Vector2( 128, 0 )
+position = Vector2( 128, 128 )
 next_world = "res://Levels/Level2T_Main.tscn"
 levelN = 1
 move_to = Vector2( 0, 20 )

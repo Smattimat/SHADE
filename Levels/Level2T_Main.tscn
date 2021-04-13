@@ -16,6 +16,10 @@ ChoiceN = 1
 script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+BackLayer4Sprite = "res://Asset/Sfondi/Inverno/Invernocielo.png"
+BackLayer3Sprite = "res://Asset/Sfondi/Inverno/Invernomontagna.png"
+BackLayer2Sprite = "res://Asset/Sfondi/Inverno/invernoconnlina.png"
+BackLayer1Sprite = "res://Asset/Sfondi/Inverno/Invernofront.png"
 LevelAt = "PrimDue"
 
 [node name="Base" type="TileMap" parent="."]
@@ -39,8 +43,8 @@ pause_mode = 2
 
 [node name="WorldComplete" parent="." instance=ExtResource( 4 )]
 position = Vector2( 192, 128 )
-next_world = "res://Levels/Level1T_Main.tscn"
-levelN = 20
+next_world = "res://Levels/Level3Prim.tscn"
+levelN = 2
 move_to = Vector2( 0, 20 )
 speed = 0.7
 

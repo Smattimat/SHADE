@@ -9,6 +9,7 @@ func deploy(var next,var lN):
 	self.visible=true
 	$Music.play()
 	
+	
 func UpdateKarma():
 	var Main = get_tree().get_root().get_node("Main")
 	if Settings.GameLevelAt==LevelN+1:

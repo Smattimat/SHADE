@@ -1,5 +1,20 @@
 extends Node
+#LevelCommands Livello 2
 
+var UnlockedColors=2
+
+func _ready():
+	var Buttons=get_tree().get_nodes_in_group("ColorButtons")
+	for but in Buttons:
+		if but.colNum>UnlockedColors:
+			but.setLocked()
+		else:
+			but.setUnlock()
 
 func reapplytoHUD():
-	pass
+	var Buttons=get_tree().get_nodes_in_group("ColorButtons")
+	for but in Buttons:
+		if but.colNum>UnlockedColors:
+			but.setLocked()
+		else:
+			but.setUnlock()

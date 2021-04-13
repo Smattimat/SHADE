@@ -30,20 +30,24 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name=="Player" and called==false:
-			var EndLevelScreen = get_tree().get_root().get_node("Main").find_node("EndLevelScreen")
-			EndLevelScreen.deploy(next_world,levelN)
-			Settings.load_Level()
-			if Settings.GameLevelAt==levelN:
-				Settings.GameLevelAt+=1
-				Settings.save_Level()
-			var Right = get_tree().get_root().get_node("Main").find_node("Right")
-			var Left = get_tree().get_root().get_node("Main").find_node("Left")
-			var Jump = get_tree().get_root().get_node("Main").find_node("Jump")
-			var Color2 = get_tree().get_root().get_node("Main").find_node("Color2")
-			var exit =get_tree().get_root().get_node("Main").find_node("Exit")
-			exit.visible=false
-			Right.visible=false
-			Left.visible=false
-			Jump.visible=false
-			Color2.visible=false
-			called=true
+			if levelN==777:
+				var Main = get_tree().get_root().get_node("Menu").find_node("Main")
+				Main.DeactivateLevel()
+			else:
+				var EndLevelScreen = get_tree().get_root().get_node("Main").find_node("EndLevelScreen")
+				EndLevelScreen.deploy(next_world,levelN)
+				Settings.load_Level()
+				if Settings.GameLevelAt==levelN:
+					Settings.GameLevelAt=Settings.GameLevelAt+1
+					Settings.save_Level()
+				var Right = get_tree().get_root().get_node("Main").find_node("Right")
+				var Left = get_tree().get_root().get_node("Main").find_node("Left")
+				var Jump = get_tree().get_root().get_node("Main").find_node("Jump")
+				var Color2 = get_tree().get_root().get_node("Main").find_node("Color2")
+				var exit =get_tree().get_root().get_node("Main").find_node("Exit")
+				exit.visible=false
+				Right.visible=false
+				Left.visible=false
+				Jump.visible=false
+				Color2.visible=false
+				called=true
