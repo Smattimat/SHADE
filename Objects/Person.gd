@@ -55,7 +55,7 @@ const FLY_FORCE = 700
 const WALK_MIN_SPEED =30
 const WALK_MAX_SPEED = 320
 const STOP_FORCE = 1350
-const JUMP_SPEED = 400
+const JUMP_SPEED = 450
 const JUMP_MAX_AIRBORNE_TIME = 0.1
 
 const SLIDE_STOP_VELOCITY = 0.4 # one pixel/second
@@ -116,7 +116,7 @@ func _physics_process(delta):
 			collision = $KPerson.get_slide_collision(i)
 			if collision.collider.name=="MPlatform":
 				pass
-			elif(collision.position.y > position.y):
+			elif(collision.position.y > $KPerson.position.y):
 				$KPerson.move_and_collide( - $KPerson.get_floor_velocity() * delta)
 				break
 

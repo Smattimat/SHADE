@@ -37,6 +37,8 @@ func _init_tween():
 	tween.interpolate_property(self,"follow",move_to,Vector2.ZERO,duration,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT,IDLE_DURATION*2+duration)
 	tween.start()
 
+const GRAVITY = 12000.0
+
 func _physics_process(delta):
 	if alive==true:
 		drone.position = drone.position.linear_interpolate(follow,0.075)
@@ -59,7 +61,15 @@ func _physics_process(delta):
 				$Sound.play()
 				tween.stop(self)
 				$DroneBody/AnimatedSprite.play("incaz")
+	else:
+		var force = Vector2(0, GRAVITY)	
+		var velocity = force * delta
+		$DroneBody.move_and_slide(velocity,Vector2(0, -1))
+		if $DroneBody.is_on_floor(): 
+			velocity.y=0
+	
 
+		
 
 func _on_Area2D_body_entered(body):
 	if alive==true and (body.name=="Player" or body.name=="KPerson"):

@@ -182,11 +182,21 @@ func ActivateLevel():
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Options.visible=false
 	$Player/Camera2D.current=true
 	var Menucam = get_tree().get_root().get_node("Menu").find_node("Menucam")
+	var leveltwo = get_tree().get_root().get_node("Menu").find_node("Levels2")
+	var options = get_tree().get_root().get_node("Menu").find_node("Options")
 	Menucam.current=false
+	options.visible=false
+	leveltwo.visible=false
 	$Player/Canvas/HUD/Box.visible=true
 	$Player/Canvas/HUD/RightBox.visible=true
 	$Player.position=$SpawnPointP.position
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect.rect_size.y=384
+	var lvlBut=get_tree().get_nodes_in_group("LevelButtons")
+	for but in lvlBut:
+		but.set_block_signals(true)
+	var ActBut=get_tree().get_nodes_in_group("ActButtons")
+	for but in ActBut:
+		but.set_block_signals(true)
 	
 func DeactivateLevel():
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/ToMenu.visible=true
@@ -194,10 +204,20 @@ func DeactivateLevel():
 	$Player/Camera2D.current=false
 	var Menucam = get_tree().get_root().get_node("Menu").find_node("Menucam")
 	Menucam.current=true
+	var leveltwo = get_tree().get_root().get_node("Menu").find_node("Levels2")
+	var options = get_tree().get_root().get_node("Menu").find_node("Options")
+	options.visible=true
+	leveltwo.visible=true
 	$Player/Canvas/HUD/Box.visible=false
 	$Player/Canvas/HUD/RightBox.visible=false
 	$Player/Canvas/HUD/Menuino.visible=false
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect.rect_size.y=640
+	var lvlBut=get_tree().get_nodes_in_group("LevelButtons")
+	for but in lvlBut:
+		but.set_block_signals(false)
+	var ActBut=get_tree().get_nodes_in_group("ActButtons")
+	for but in ActBut:
+		but.set_block_signals(false)
 
 	
 
