@@ -35,6 +35,8 @@ func _ready():
 	$Player/Canvas/HUD/GameOverScreen/BlackOverlay/ColorRect/ToMenu.connect("pressed",self,"on_toMenu")
 	$Player/Canvas/HUD/GameOverScreen/BlackOverlay/ColorRect/Retry.connect("pressed",self,"on_toRetry")
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Retry.connect("pressed",self,"on_toRetry")
+	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Options.connect("pressed",self,"on_Options")
+	$Player/Canvas/HUD/Options/Back.connect("pressed",self,"Exit_Options")
 	$LevelMusic.play()
 	var i=0
 	while i<ChoiceN:
@@ -44,6 +46,15 @@ func _ready():
 		ChoicesArray.append(c)
 		i=i+1
 		
+func Exit_Options():
+	$Player/Canvas/HUD/Menuino.visible=true
+	$Player/Canvas/HUD/Options.visible=false
+	$Player/Canvas/HUD/Menuino.UpdateLanguage()
+		
+func on_Options():
+	$Player/Canvas/HUD/Menuino.visible=false
+	$Player/Canvas/HUD/Options.visible=true
+	
 
 func on_toRetry():
 	get_tree().paused=false
@@ -54,6 +65,7 @@ func on_toMenu():
 	get_tree().change_scene("res://Screens/Menu.tscn")
 
 func on_exit():
+	$Player/Canvas/HUD/Menuino.UpdateLanguage()
 	if get_tree().paused==true:
 		WasPaused=true
 	else:

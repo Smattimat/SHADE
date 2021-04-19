@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Asset/Buttons/left.png" type="Texture" id=1]
-[ext_resource path="res://Asset/Buttons/right.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Buttons/left-black.png" type="Texture" id=1]
+[ext_resource path="res://Asset/Buttons/right-black.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Buttons/X-Black.png" type="Texture" id=3]
 [ext_resource path="res://Asset/Buttons/Change_color.png" type="Texture" id=4]
 [ext_resource path="res://Screens/HUD.gd" type="Script" id=5]
-[ext_resource path="res://Asset/Buttons/X.png" type="Texture" id=6]
+[ext_resource path="res://Screens/Options.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Screens/Menuino.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Screens/GameOverScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Screens/NarrationInterface.tscn" type="PackedScene" id=9]
@@ -60,7 +61,7 @@ __meta__ = {
 [node name="Exit" type="TouchScreenButton" parent="Box"]
 position = Vector2( 10, 10 )
 scale = Vector2( 0.5, 0.496124 )
-normal = ExtResource( 6 )
+normal = ExtResource( 3 )
 shape = SubResource( 2 )
 
 [node name="Jump" type="TouchScreenButton" parent="Box"]
@@ -88,6 +89,9 @@ visible = false
 visible = false
 
 [node name="EndLevelScreen" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[node name="Options" parent="." instance=ExtResource( 6 )]
 visible = false
 [connection signal="pressed" from="Box/Exit" to="." method="_on_Exit_pressed"]
 [connection signal="pressed" from="Box/Color2" to="." method="_on_Color2_pressed"]

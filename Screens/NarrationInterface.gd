@@ -13,7 +13,7 @@ var Dialogue
 
 func _ready():
 	$VideoBox.connect("gui_input",self,"_on_next_step")
-	$DialogueBox/Next.connect("pressed",self,"_on_next_step")
+	$DialogueBox.connect("gui_input",self,"_on_next_step")
 	$Choice/BlackOverlay/TextureRect/Hell.connect("pressed",self,"_on_next_step")
 	$Choice/BlackOverlay/TextureRect/Paradise.connect("pressed",self,"_on_next_step")
 	$ImageBox/TextureRect/Next.connect("pressed",self,"_on_next_step")
@@ -74,9 +74,9 @@ func _load(var N):
 	DNumber=N
 	var FilePath
 	if IsChoiceBased==true:
-		FilePath="res://Dialogue/"+str(P.LevelAt)+"/"+str(N)+ChoicePath+".json"
+		FilePath="res://Dialogue/"+str(P.LevelAt)+Settings.Language+"/"+str(N)+ChoicePath+".json"
 	else:
-		FilePath="res://Dialogue/"+str(P.LevelAt)+"/"+str(N)+".json"
+		FilePath="res://Dialogue/"+str(P.LevelAt)+Settings.Language+"/"+str(N)+".json"
 	var file = File.new()
 	file.open(FilePath,File.READ)	
 	var Dialogue = parse_json(file.get_as_text())
@@ -99,7 +99,7 @@ func _on_next_step():
 			$VideoBox.visible=false
 			$DialogueBox.visible=false
 			$ImageBox.visible=false
-			$Choice.display(Dialogue[Dindex].Text,Dialogue[Dindex].good,Dialogue[Dindex].bad)
+			$Choice.display(Dialogue[Dindex].Text,Dialogue[Dindex].good,Dialogue[Dindex].bad,Dialogue[Dindex].id)
 		elif(Dialogue[Dindex].type=="video"):
 			$Choice.visible=false
 			$VideoBox.visible=true

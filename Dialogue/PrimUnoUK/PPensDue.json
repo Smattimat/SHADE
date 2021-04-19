@@ -1,0 +1,7 @@
+{
+  "1" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"I was able to take advantage of a lot of people to get here." },
+  "2" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"If it's still reasonable to call them persons... they are totally deprived of em-." },
+  "3" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"!!!" },
+  "4" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"They must have some emotions, otherwise i wuoldn't have been able to control them!" },
+  "5" : {"type":"dialogue","name": "Player","Face":"Sad","Text":"Still I didn't receive any answare..." } 
+}

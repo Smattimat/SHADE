@@ -429,8 +429,8 @@ visible = false
 [node name="Levels2" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1376.0
-margin_right = 1376.0
+margin_left = 1408.0
+margin_right = 1408.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -614,11 +614,10 @@ Inf = true
 [node name="Levels1" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1376.0
-margin_right = 1376.0
+margin_left = 1408.0
+margin_right = 1408.0
 script = ExtResource( 18 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -845,17 +844,23 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1000
 texture = ExtResource( 5 )
 
-[node name="Gioca" type="TouchScreenButton" parent="MenuContainer/VBoxContainer"]
+[node name="Gioca" type="TouchScreenButton" parent="MenuContainer/VBoxContainer" groups=[
+"ActButtons",
+]]
 position = Vector2( -192, -136 )
 z_index = 1000
 normal = ExtResource( 14 )
 
-[node name="Options" type="TouchScreenButton" parent="MenuContainer/VBoxContainer"]
+[node name="Options" type="TouchScreenButton" parent="MenuContainer/VBoxContainer" groups=[
+"ActButtons",
+]]
 position = Vector2( -192, 24 )
 z_index = 1000
 normal = ExtResource( 2 )
 
-[node name="Esci" type="TouchScreenButton" parent="MenuContainer/VBoxContainer"]
+[node name="Esci" type="TouchScreenButton" parent="MenuContainer/VBoxContainer" groups=[
+"ActButtons",
+]]
 position = Vector2( -192, 184 )
 z_index = 1000
 normal = ExtResource( 6 )

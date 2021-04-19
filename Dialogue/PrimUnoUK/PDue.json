@@ -1,0 +1,5 @@
+{
+   "1" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Another ripped sheet of paper..." },
+   "2" : {"type":"image","name": "appuntiuno.png" },
+   "3": {"type":"dialogue","name": "Player","Face":"Sad","Text":"Tests on Humans... Maybe i'm starting to remember something..." }   
+}

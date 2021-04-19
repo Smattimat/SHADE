@@ -1,0 +1,7 @@
+{
+  "1" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Sono riuscito a sfruttare diverse persone per arrivare fin qui." },
+  "2" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"Se si possono chiamare ancora persone... sono totalmente prive di-." },
+  "3" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"!!!" },
+  "4" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"Non possono essere prive di emozioni, altrimenti non avrei potuto comandarle!" },
+  "5" : {"type":"dialogue","name": "Player","Face":"Sad","Text":"Ma comunque non ho ricevuto alcun tipo di risposta da loro..." } 
+}

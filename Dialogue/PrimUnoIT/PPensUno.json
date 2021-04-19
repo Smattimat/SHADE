@@ -1,0 +1,7 @@
+{
+  "1": {"type":"dialogue","name":"Player","Face":"Surprise","Text":"Sono stato io?!"},
+  "2": {"type":"dialogue","name":"Player","Face":"Neutral","Text":"Ora che ci penso, la Dottoressa aveva detto che lavorando al macchinario ci sarebbero stati effetti collaterali..."},
+  "3": {"type":"dialogue","name":"Player","Face":"Neutral","Text":"Ed avendo lavorato al suo nucleo per anni, potrei aver sviluppato una sorta di resistenza... Per questo posso muovermi... "},
+  "4": {"type":"dialogue","name":"Player","Face":"Surprise","Text":"ed e' per questo che le altre persone del mio stesso colore mi imitano!"}
+    
+}

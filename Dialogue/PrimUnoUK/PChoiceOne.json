@@ -1,0 +1,6 @@
+{
+  "1" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Ora ci sara' la prima scelta del gioco" },
+  "2" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Le tue decisioni influenzeranno il finale della storia" },
+  "3" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Ecco un esempio:" },
+  "4":{"type":"choice","Text":"Se ne avrai la possibilita' tornerai ad aiutare queste povere persone? ","id":"0","good":"Ricordati di loro","bad":"Cerca solo la vendetta"}
+}

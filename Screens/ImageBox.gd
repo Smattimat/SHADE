@@ -3,7 +3,7 @@ extends Control
 
 func display(var name,var NS):	
 	self.visible=true
-	$TextureRect/ShownImage.texture=load("res://Dialogue/Images/"+name)
+	$TextureRect/ShownImage.texture=load("res://Dialogue/Images"+Settings.Language+"/"+name)
 	$TextureRect/AnimationPlayer.play("Next Hopp")
 
 
