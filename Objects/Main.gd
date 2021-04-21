@@ -21,6 +21,12 @@ var ChoicesArray=[]
 var GoodCount=0
 var BadCount=0
 
+func UpdateVolume():
+	if(Settings.Music_Volume==0):
+		$LevelMusic.volume_db=-80
+	else:
+		$LevelMusic.volume_db=(Settings.Music_Volume*5)-35
+
 func _ready():
 	$Player/Canvas/HUD/RightBox/Left.connect("pressed",self,"on_left")
 	$Player/Canvas/HUD/RightBox/Left.connect("released",self,"not_on_left")
@@ -37,6 +43,7 @@ func _ready():
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Retry.connect("pressed",self,"on_toRetry")
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Options.connect("pressed",self,"on_Options")
 	$Player/Canvas/HUD/Options/Back.connect("pressed",self,"Exit_Options")
+	UpdateVolume()
 	$LevelMusic.play()
 	var i=0
 	while i<ChoiceN:
@@ -50,6 +57,7 @@ func Exit_Options():
 	$Player/Canvas/HUD/Menuino.visible=true
 	$Player/Canvas/HUD/Options.visible=false
 	$Player/Canvas/HUD/Menuino.UpdateLanguage()
+	UpdateVolume()
 		
 func on_Options():
 	$Player/Canvas/HUD/Menuino.visible=false

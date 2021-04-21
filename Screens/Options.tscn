@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Asset/Buttons/left.png" type="Texture" id=1]
 [ext_resource path="res://Screens/Options.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Asset/Icons/UK.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/Terminal2.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Fonts/VideoTerminalScreen.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Asset/Buttons/right.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 48 )
@@ -51,7 +52,7 @@ normal = ExtResource( 4 )
 [node name="LLanguage" type="Label" parent="."]
 margin_left = 320.0
 margin_top = 192.0
-margin_right = 830.0
+margin_right = 608.0
 margin_bottom = 242.0
 custom_fonts/font = ExtResource( 5 )
 text = "Language"
@@ -84,12 +85,29 @@ __meta__ = {
 
 [node name="Music_Slider" type="HSlider" parent="."]
 margin_left = 640.0
-margin_top = 288.0
-margin_right = 928.0
-margin_bottom = 352.0
+margin_top = 256.0
+margin_right = 896.0
+margin_bottom = 320.0
+rect_scale = Vector2( 1, 2 )
+max_value = 10.0
+value = 5.0
+rounded = true
+tick_count = 11
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Music_UP" type="TouchScreenButton" parent="."]
+position = Vector2( 896, 288 )
+scale = Vector2( 0.64, 0.64 )
+normal = ExtResource( 7 )
+
+[node name="Music_Down" type="TouchScreenButton" parent="."]
+position = Vector2( 576, 288 )
+scale = Vector2( 0.64, 0.64 )
+normal = ExtResource( 1 )
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="LIT" to="." method="_on_LIT_pressed"]
 [connection signal="pressed" from="LUK" to="." method="_on_LUK_pressed"]
+[connection signal="pressed" from="Music_UP" to="." method="_on_Music_UP_pressed"]
+[connection signal="pressed" from="Music_Down" to="." method="_on_Music_Down_pressed"]

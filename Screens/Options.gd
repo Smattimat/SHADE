@@ -8,11 +8,12 @@ var IT=preload("res://Asset/Icons/IT.png")
 
 func _ready():
 	Settings.load_Options()
+	$Music_Slider.value=Settings.Music_Volume
 	UpdateLanguage()
 
 func _on_Back_pressed():
 	emit_signal("gui_input")
-	print("Backrequest")
+	Settings.save_Options()
 
 func UpdateLanguage():
 	if Settings.Language=="IT":
@@ -42,3 +43,15 @@ func _on_LUK_pressed():
 	Settings.Language="UK"
 	Settings.save_Options()
 	UpdateLanguage()
+
+
+func _on_Music_UP_pressed():
+	$Music_Slider.value=$Music_Slider.value+1
+	Settings.Music_Volume=$Music_Slider.value
+	
+
+
+func _on_Music_Down_pressed():
+	$Music_Slider.value=$Music_Slider.value-1
+	Settings.Music_Volume=$Music_Slider.value
+

@@ -804,8 +804,8 @@ margin_left = 1376.0
 margin_right = 1376.0
 
 [node name="TryAlternativeFinal" type="TouchScreenButton" parent="Options"]
-position = Vector2( 32, 128 )
-scale = Vector2( 2, 1 )
+position = Vector2( 544, 448 )
+scale = Vector2( 2, 0.5 )
 z_index = 1000
 normal = ExtResource( 27 )
 
@@ -877,7 +877,6 @@ anims/ToLevels = SubResource( 11 )
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = -10.0
-autoplay = true
 
 [node name="Main" parent="." instance=ExtResource( 29 )]
 [connection signal="pressed" from="Levels2/Back2" to="." method="_on_Back2_pressed"]

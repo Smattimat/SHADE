@@ -6,8 +6,19 @@ func _ready():
 	$LoadingScreen.visible=false
 	Settings.save_Level() #To reset level at one before try and release
 	Settings.save_Options() #To reset Options at one before try and release
-	UpdateLockedLevels()
+	Settings.load_Options()
 	UpdateLanguage()
+	UpdateVolume()
+	$Music.play()
+	UpdateLockedLevels()
+	
+
+func UpdateVolume():
+	if(Settings.Music_Volume==0):
+		$Music.volume_db=-80
+	else:
+		$Music.volume_db=(Settings.Music_Volume*5)-35
+
 	
 func UpdateLanguage():
 	$Options.UpdateLanguage()
@@ -60,6 +71,7 @@ func Option_to_Menu():
 	$AnimationPlayer.play("OptionToMenu")
 	$MenuContainer/CreditsButton.set_block_signals(false)
 	UpdateLanguage()
+	UpdateVolume()
 
 
 func _on_Back_pressed():
