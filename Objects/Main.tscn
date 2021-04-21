@@ -222,7 +222,6 @@ material = SubResource( 2 )
 position = Vector2( 1536, 672 )
 scale = Vector2( 1.2, 1.2 )
 z_index = 2
-LavaParticles = false
 
 [node name="Lava" parent="." instance=ExtResource( 18 )]
 position = Vector2( 768, 768 )

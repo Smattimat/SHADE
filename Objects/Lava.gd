@@ -2,14 +2,15 @@ extends Node2D
 
 var timer = Timer.new()
 
-export var LavaParticles=true
+export var Lava=true
 
 func _ready():
 	timer.wait_time=0.2
 	timer.connect("timeout",self,"GameOver") 
 	add_child(timer)
-	if LavaParticles==false:
+	if Lava==false:
 		$Particles2D.emitting=false
+		$LavaTune.stop()
 
 func _on_Area2D_body_entered(body):
 	if(body.name=="Player" or body.name=="KPerson"):
