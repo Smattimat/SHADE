@@ -6,7 +6,7 @@ var SCENE
 var rng = RandomNumberGenerator.new()
 	
 func _ready():
-	timer.wait_time=3
+	timer.wait_time=2
 	timer.connect("timeout",self,"changeScene")
 	add_child(timer)
 	rng.randomize()
@@ -17,12 +17,12 @@ func loadScene(var scene):
 	SCENE=scene
 	timer.start()
 	var back=rng.randi_range(0, 2)
-	print(back)
 	$AnimationPlayer.play("dots")
 	var path="res://Asset/LoadingImages/im"+str(back)+".png"
 	$Node2D/ColorRect/TextureRect.texture=load(path)
 	
 func changeScene():
+	get_tree().paused=false
 	get_tree().change_scene(SCENE)
 	
 	
