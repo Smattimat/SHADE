@@ -1,14 +1,14 @@
 {
-  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"Una ... Persona!?"},
-  "2":{"type":"dialogue","name":"Player","Face":"Empathy","Text":"Posso chiederle dove ci troviamo?"},
-  "3":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"Ehi, dico a lei!"},
+  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"A...A person!?"},
+  "2":{"type":"dialogue","name":"Player","Face":"Empathy","Text":"May i ask you where we are?"},
+  "3":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"Hey,I'am asking you!"},
   "4":{"type":"dialogue","name":"Person","Face":"Red","Text":"..."},
-  "5":{"type":"dialogue","name":"Player","Face":"Sad","Text":"Non e' in grado di parlare..."},
-  "6":{"type":"dialogue","name":"Player","Face":"Depre","Text":"Cosa mi e' passato per la testa partecipando alla creazione di quella macch-"},
+  "5":{"type":"dialogue","name":"Player","Face":"Sad","Text":"He is not able to talk..."},
+  "6":{"type":"dialogue","name":"Player","Face":"Depre","Text":"What was i thinking when i took part in the creation of this machi-"},
   "7":{"type":"video","name":"Intro-5.0.ogv"},
-  "8":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"La dottoressa... e' vero!"},
-  "9":{"type":"dialogue","name":"Player","Face":"Angry","Text":"Lei ci ha traditi! Tutti quanti!"},
-  "10":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Usa il tasto colorato per controllare le tue emozioni"}
+  "8":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"The doctress... it's true!"},
+  "9":{"type":"dialogue","name":"Player","Face":"Angry","Text":"She betrayed all of us!"},
+  "10":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Use the colorful button to control your emotions!"}
 
 
 }

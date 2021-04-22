@@ -1,6 +1,6 @@
 {
-  "1" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Ora ci sara' la prima scelta del gioco" },
-  "2" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Le tue decisioni influenzeranno il finale della storia" },
-  "3" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Ecco un esempio:" },
-  "4":{"type":"choice","Text":"Se ne avrai la possibilita' tornerai ad aiutare queste povere persone? ","id":"0","good":"Ricordati di loro","bad":"Cerca solo la vendetta"}
+  "1" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"This is the first choice of the game" },
+  "2" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Your choices will condition your ending" },
+  "3" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Here is an example:" },
+  "4":{"type":"choice","Text":"If you will ever have the chance, will you return here to save those people? ","id":"0","good":"Remember them","bad":"I only want my revenge"}
 }

@@ -3,9 +3,6 @@ extends Node
 func _ready():
 	$AnimationPlayer.play("FadeInMenù")
 	$Options.connect("gui_input",self,"Option_to_Menu")
-	$LoadingScreen.visible=false
-	Settings.save_Level() #To reset level at one before try and release
-	Settings.save_Options() #To reset Options at one before try and release
 	Settings.load_Options()
 	UpdateLanguage()
 	UpdateVolume()

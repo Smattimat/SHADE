@@ -52,6 +52,8 @@ func _ready():
 		c.ID=i
 		ChoicesArray.append(c)
 		i=i+1
+	if(Settings.SkipTutorial==true):
+		$Player.position=$SkipTuPosition.position
 		
 func Exit_Options():
 	$Player/Canvas/HUD/Menuino.visible=true

@@ -8,6 +8,12 @@ func deploy(var next,var lN):
 	LevelN=lN
 	self.visible=true
 	$Music.play()
+	if Settings.Language=="IT":
+		$BlackOverlay/ColorRect/Label.text="Successo!"
+		$BlackOverlay/ColorRect/Label2.text="Hai completato il livello"
+	else:
+		$BlackOverlay/ColorRect/Label.text="Success!"
+		$BlackOverlay/ColorRect/Label2.text="You completed the level"
 	
 	
 func UpdateKarma():

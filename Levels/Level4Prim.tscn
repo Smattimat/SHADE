@@ -10,6 +10,8 @@
 script = ExtResource( 4 )
 CurrentScene = "res://Levels/Level4Prim.tscn"
 
+[node name="SkipTuPosition" type="Position2D" parent="."]
+
 [node name="LevelCommands" type="Node" parent="."]
 script = ExtResource( 3 )
 

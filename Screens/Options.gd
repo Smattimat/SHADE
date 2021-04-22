@@ -5,10 +5,16 @@ var UK=preload("res://Asset/Icons/UK.png")
 var IT_B=preload("res://Asset/Icons/IT-B.png")
 var IT=preload("res://Asset/Icons/IT.png")
 
+var Checked=preload("res://Asset/Buttons/BTNChecksi.png")
+var UnChecked=preload("res://Asset/Buttons/BTNCheckno.png")
 
 func _ready():
 	Settings.load_Options()
 	$Music_Slider.value=Settings.Music_Volume
+	if(Settings.SkipTutorial==true):
+		$Skip_T.normal=Checked
+	else:
+		$Skip_T.normal=UnChecked
 	UpdateLanguage()
 
 func _on_Back_pressed():
@@ -21,11 +27,13 @@ func UpdateLanguage():
 		$LIT.normal=IT
 		$LLanguage.text="Lingua"
 		$LMusic.text="Musica"
+		$LTutorial.text="Salta Turorial"
 	else:
 		$LUK.normal=UK
 		$LIT.normal=IT_B
 		$LLanguage.text="Language"
 		$LMusic.text="Music"
+		$LTutorial.text="Skip Turorial"
 		
 
 
@@ -55,3 +63,12 @@ func _on_Music_Down_pressed():
 	$Music_Slider.value=$Music_Slider.value-1
 	Settings.Music_Volume=$Music_Slider.value
 
+
+
+func _on_Skip_T_pressed():
+	if(Settings.SkipTutorial==false):
+		Settings.SkipTutorial=true
+		$Skip_T.normal=Checked
+	else:
+		Settings.SkipTutorial=false
+		$Skip_T.normal=UnChecked

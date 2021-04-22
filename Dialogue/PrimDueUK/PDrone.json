@@ -1,0 +1,10 @@
+{
+   "1" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"What is that thing?" },
+   "2" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"It looks like some sort of drone... I shouldn't touch those cables, they must be dangerous!" },
+   "3" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"But i could ask for help! Somebody is surely piloting it!" },
+   "4" : {"type":"dialogue","name": "Player","Face":"Sad","Text":"Please help,i don't know where i am! Please help me!" },
+   "5" : {"type":"dialogue","name": "Drone","Face":"D","Text":"..." },
+   "6" : {"type":"dialogue","name": "Player","Face":"Sad","Text":"Not even a sign of life..." },
+   "7" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"To get past I'll have to destroy it... " },
+   "8" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"I think that his blades are his weak spot. I'll try to jump on it and avoid those cables!" }
+}

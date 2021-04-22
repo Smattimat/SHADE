@@ -22,13 +22,17 @@ script = ExtResource( 1 )
 CurrentScene = "res://Levels/Level1T_Main.tscn"
 ChoiceN = 1
 
+[node name="SkipTuPosition" type="Position2D" parent="."]
+position = Vector2( 0, -800 )
+
 [node name="LevelCommands" type="Node" parent="."]
 script = ExtResource( 6 )
 
 [node name="ActivateJump" type="Area2D" parent="LevelCommands"]
+position = Vector2( 0, -160 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelCommands/ActivateJump"]
-position = Vector2( 2560, 256 )
+position = Vector2( 2560, 416 )
 shape = SubResource( 1 )
 
 [node name="ActivateColor" type="Area2D" parent="LevelCommands"]
