@@ -50,11 +50,11 @@ func UpdateColor(Col):
 		
 # Member variables
 const GRAVITY = 1000.0 # pixels/second/second
-const WALK_FORCE = 700
-const FLY_FORCE = 700
+const PUSH_FORCE = 1000
 const WALK_MIN_SPEED =30
 const WALK_MAX_SPEED = 320
-const STOP_FORCE = 1800
+const STOP_FORCE = 1100
+const STOP_FORCE_AIR=300
 const JUMP_SPEED = 450
 const JUMP_MAX_AIRBORNE_TIME = 0.1
 
@@ -63,10 +63,10 @@ const SLIDE_STOP_MIN_TRAVEL = 0.5 # one pixel
 
 var velocity = Vector2()
 var vel= Vector2()
-var on_air_time = 100
+var on_air_time = 0
 var jumping = false
 
-var InVolo = false
+
 var prev_jump_pressed = false
 var collision
 
@@ -76,53 +76,14 @@ func _physics_process(delta):
 		var force = Vector2(0, GRAVITY)	
 		var stop = true
 	
-		if on_air_time > JUMP_MAX_AIRBORNE_TIME:
-			stop = false
-			InVolo = true
-		else:
-			InVolo = false
-	
 		
-		if Left:
-			if velocity.x <= WALK_MIN_SPEED and velocity.x > -WALK_MAX_SPEED:
-				if InVolo:
-					force.x -= FLY_FORCE
-				else:	
-					force.x -= WALK_FORCE
-				stop = false
-		elif Right:
-			if velocity.x >= -WALK_MIN_SPEED and velocity.x < WALK_MAX_SPEED:
-				if InVolo:
-					force.x += FLY_FORCE
-				else:
-					force.x += WALK_FORCE
-				stop = false
-	
-		if stop:
-			var vsign = sign(velocity.x)
-			var vlen = abs(velocity.x)
-		
-			vlen -= STOP_FORCE * delta
-			if vlen < 0:
-				vlen = 0		
-			velocity.x = vlen * vsign
+
 			
-			
-		var snap = Vector2.DOWN * 32 if !jumping else Vector2.ZERO
-		# Integrate forces to velocity
-		velocity += force * delta
-		$KPerson.move_and_slide_with_snap(velocity, snap,Vector2(0, -1))	
-		for i in $KPerson.get_slide_count():
-			collision = $KPerson.get_slide_collision(i)
-			if collision.collider.name=="MPlatform":
-				pass
-			elif(collision.position.y > $KPerson.position.y):
-				$KPerson.move_and_collide( - $KPerson.get_floor_velocity() * delta)
-				break
 
 		if $KPerson.is_on_floor():
+			if on_air_time!=0:
+				stop = true
 			on_air_time = 0
-			stop = true
 			jumping = false
 			if !Jump:
 				velocity.y=0
@@ -135,6 +96,27 @@ func _physics_process(delta):
 		if $KPerson.is_on_wall():
 			velocity.x=0
 		
+		if on_air_time > JUMP_MAX_AIRBORNE_TIME:
+			stop = false
+		
+		if Left:
+			if velocity.x <= WALK_MIN_SPEED and velocity.x > -WALK_MAX_SPEED:
+				force.x-=PUSH_FORCE
+				stop = false
+		elif Right:
+			if velocity.x >= -WALK_MIN_SPEED and velocity.x < WALK_MAX_SPEED:
+				force.x+=PUSH_FORCE
+				stop = false
+			
+		var vsign = sign(velocity.x)
+		var vlen = abs(velocity.x)
+		if stop:
+			vlen -= STOP_FORCE * delta
+		else:
+			vlen -= STOP_FORCE_AIR * delta
+		if vlen < 0:
+			vlen = 0		
+		velocity.x = vlen * vsign
 
 		
 		if jumping and velocity.y > 0:
@@ -147,6 +129,18 @@ func _physics_process(delta):
 			velocity.y = -JUMP_SPEED
 			jumping = true
 	
+		var snap = Vector2.DOWN * 32 if !jumping else Vector2.ZERO
+		# Integrate forces to velocity
+		velocity += force * delta
+		$KPerson.move_and_slide_with_snap(velocity, snap,Vector2(0, -1))	
+		for i in $KPerson.get_slide_count():
+			collision = $KPerson.get_slide_collision(i)
+			if collision.collider.name=="MPlatform":
+				pass
+			elif(collision.position.y > $KPerson.position.y):
+				$KPerson.move_and_collide( - $KPerson.get_floor_velocity() * delta)
+				break
+				
 		on_air_time += delta
 		prev_jump_pressed = Jump
 	else:

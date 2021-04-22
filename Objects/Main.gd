@@ -36,11 +36,7 @@ func _ready():
 	$Player/Canvas/HUD/RightBox/Right.connect("released",self,"not_on_right")
 	$Player/Canvas/HUD.connect("renamed",self,"on_color")
 	$Player/Canvas/HUD/Box/Exit.connect("pressed",self,"on_exit")
-	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Resume.connect("pressed",self,"on_resume")
-	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/ToMenu.connect("pressed",self,"on_toMenu")
-	$Player/Canvas/HUD/GameOverScreen/BlackOverlay/ColorRect/ToMenu.connect("pressed",self,"on_toMenu")
-	$Player/Canvas/HUD/GameOverScreen/BlackOverlay/ColorRect/Retry.connect("pressed",self,"on_toRetry")
-	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Retry.connect("pressed",self,"on_toRetry")
+	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Resume.connect("pressed",self,"on_resume")	
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Options.connect("pressed",self,"on_Options")
 	$Player/Canvas/HUD/Options/Back.connect("pressed",self,"Exit_Options")
 	UpdateVolume()
@@ -65,14 +61,6 @@ func on_Options():
 	$Player/Canvas/HUD/Menuino.visible=false
 	$Player/Canvas/HUD/Options.visible=true
 	
-
-func on_toRetry():
-	get_tree().paused=false
-	get_tree().change_scene(CurrentScene)
-	
-func on_toMenu():
-	get_tree().paused=false
-	get_tree().change_scene("res://Screens/Menu.tscn")
 
 func on_exit():
 	$Player/Canvas/HUD/Menuino.UpdateLanguage()

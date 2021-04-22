@@ -25,7 +25,7 @@ z_index = -100
 tile_set = ExtResource( 5 )
 cell_size = Vector2( 128, 128 )
 format = 1
-tile_data = PoolIntArray( 196621, 0, 196608, 196622, 0, 196609, 196623, 0, 196609, 196624, 0, 196609, 196625, 0, 196609, 196626, 0, 196609, 196627, 0, 196609, 196628, 0, 196609, 196629, 0, 196609, 196630, 0, 196609, 196631, 0, 196610, 262149, 0, 6, 262150, 0, 196610, 327684, 0, 6, 327685, 0, 65543, 393219, 0, 6, 393220, 0, 65543, 458752, 0, 196608, 458753, 0, 196609, 458754, 0, 196609, 458755, 0, 65543 )
+tile_data = PoolIntArray( 196621, 0, 196608, 196622, 0, 196609, 196623, 0, 196609, 196624, 0, 196609, 196625, 0, 196609, 196626, 0, 196609, 196627, 0, 196609, 196628, 0, 196609, 196629, 0, 196609, 196630, 0, 196609, 196631, 0, 196610, 262149, 0, 6, 262150, 0, 196610, 327684, 0, 6, 327685, 0, 65543, 393219, 0, 6, 393220, 0, 65543, 458754, 0, 6, 458755, 0, 65543, 589823, 0, 196608, 524288, 0, 196609, 524289, 0, 196609, 524290, 0, 65543 )
 
 [node name="LayerTwo" type="TileMap" parent="."]
 position = Vector2( 0, -32 )
@@ -45,14 +45,14 @@ LevelAt = "PrimTre"
 [node name="LevelMusic" type="AudioStreamPlayer" parent="."]
 
 [node name="WorldComplete" parent="." instance=ExtResource( 2 )]
-position = Vector2( 128, 224 )
+position = Vector2( 384, 64 )
 next_world = "res://Levels/Level5Prim.tscn"
 levelN = 777
 move_to = Vector2( 0, 20 )
 speed = 0.7
 
 [node name="SpawnPointP" type="Position2D" parent="."]
-position = Vector2( 384, 160 )
+position = Vector2( 384, 192 )
 
 [node name="ButtonPlay" type="StaticBody2D" parent="."]
 position = Vector2( 640, 288 )

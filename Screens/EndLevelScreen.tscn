@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Fonts/Terminal2.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Asset/Scritte/ScrittaExit.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Fonts/VideoTerminalScreen.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Screens/EndLevelScreen.gd" type="Script" id=5]
 [ext_resource path="res://Asset/Musica/hai vinto-2.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Screens/LoadingScreen.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -84,5 +85,8 @@ shape = SubResource( 3 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+
+[node name="LoadingScreen" parent="." instance=ExtResource( 7 )]
+visible = false
 [connection signal="pressed" from="BlackOverlay/ColorRect/Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="BlackOverlay/ColorRect/Exit" to="." method="_on_Exit_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Screens/Menuino.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Scritte/ScrittaResume.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Asset/Scritte/ScrittaOptions.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/VideoTerminalScreen.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Asset/Scritte/ScrittaExit.png" type="Texture" id=6]
+[ext_resource path="res://Screens/LoadingScreen.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -90,4 +91,11 @@ scale = Vector2( 0.75, 0.75 )
 z_index = 1
 normal = ExtResource( 6 )
 shape = SubResource( 5 )
+
+[node name="LoadingScreen" parent="." instance=ExtResource( 7 )]
+visible = false
+[connection signal="visibility_changed" from="." to="." method="_on_Menuino_visibility_changed"]
 [connection signal="pressed" from="BlackOvelay/ColorRect/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="BlackOvelay/ColorRect/Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="BlackOvelay/ColorRect/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="BlackOvelay/ColorRect/ToMenu" to="." method="_on_ToMenu_pressed"]
