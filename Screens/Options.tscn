@@ -126,6 +126,7 @@ __meta__ = {
 position = Vector2( 802.52, 171.969 )
 scale = Vector2( 0.666667, 0.666667 )
 normal = ExtResource( 8 )
+
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="LIT" to="." method="_on_LIT_pressed"]
 [connection signal="pressed" from="LUK" to="." method="_on_LUK_pressed"]

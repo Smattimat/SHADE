@@ -56,14 +56,20 @@ func _on_LUK_pressed():
 func _on_Music_UP_pressed():
 	$Music_Slider.value=$Music_Slider.value+1
 	Settings.Music_Volume=$Music_Slider.value
-	
-
+	var LevelMusic = get_tree().get_root().get_node("Main").find_node("LevelMusic")
+	if(Settings.Music_Volume==0):
+		LevelMusic.volume_db=-80
+	else:
+		LevelMusic.volume_db=int((Settings.Music_Volume*5)-35)
 
 func _on_Music_Down_pressed():
 	$Music_Slider.value=$Music_Slider.value-1
 	Settings.Music_Volume=$Music_Slider.value
-
-
+	var LevelMusic = get_tree().get_root().get_node("Main").find_node("LevelMusic")
+	if(Settings.Music_Volume==0):
+		LevelMusic.volume_db=-80
+	else:
+		LevelMusic.volume_db=int((Settings.Music_Volume*5)-35)
 
 func _on_Skip_T_pressed():
 	if(Settings.SkipTutorial==false):

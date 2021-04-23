@@ -181,9 +181,9 @@ func ActivateLevel():
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/ToMenu.visible=false
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Options.visible=false
 	$Player/Camera2D.current=true
-	var Menucam = get_tree().get_root().get_node("Menu").find_node("Menucam")
-	var leveltwo = get_tree().get_root().get_node("Menu").find_node("Levels2")
-	var options = get_tree().get_root().get_node("Menu").find_node("Options")
+	var Menucam = get_tree().get_root().get_node("Main").find_node("Menucam")
+	var leveltwo = get_tree().get_root().get_node("Main").find_node("Levels2")
+	var options = get_tree().get_root().get_node("Main").find_node("Options")
 	Menucam.current=false
 	options.visible=false
 	leveltwo.visible=false
@@ -202,10 +202,10 @@ func DeactivateLevel():
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/ToMenu.visible=true
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Options.visible=true
 	$Player/Camera2D.current=false
-	var Menucam = get_tree().get_root().get_node("Menu").find_node("Menucam")
+	var Menucam = get_tree().get_root().get_node("Main").find_node("Menucam")
 	Menucam.current=true
-	var leveltwo = get_tree().get_root().get_node("Menu").find_node("Levels2")
-	var options = get_tree().get_root().get_node("Menu").find_node("Options")
+	var leveltwo = get_tree().get_root().get_node("Main").find_node("Levels2")
+	var options = get_tree().get_root().get_node("Main").find_node("Options")
 	options.visible=true
 	leveltwo.visible=true
 	$Player/Canvas/HUD/Box.visible=false

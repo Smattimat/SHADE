@@ -6,15 +6,15 @@ func _ready():
 	Settings.load_Options()
 	UpdateLanguage()
 	UpdateVolume()
-	$Music.play()
+	$LevelMusic.play()
 	UpdateLockedLevels()
 	
 
 func UpdateVolume():
 	if(Settings.Music_Volume==0):
-		$Music.volume_db=-80
+		$LevelMusic.volume_db=-80
 	else:
-		$Music.volume_db=(Settings.Music_Volume*5)-35
+		$LevelMusic.volume_db=(Settings.Music_Volume*5)-35
 
 	
 func UpdateLanguage():

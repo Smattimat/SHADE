@@ -31,7 +31,7 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name=="Player" and called==false:
 			if levelN==777:
-				var Main = get_tree().get_root().get_node("Menu").find_node("Main")
+				var Main = get_tree().get_root().get_node("Main").find_node("Main")
 				Main.DeactivateLevel()
 			else:
 				var EndLevelScreen = get_tree().get_root().get_node("Main").find_node("EndLevelScreen")

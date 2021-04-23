@@ -83,6 +83,7 @@ anims/Finish = SubResource( 1 )
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 2 )
+
 [connection signal="finished" from="CenterContainer/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
