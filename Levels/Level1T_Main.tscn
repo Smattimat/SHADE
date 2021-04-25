@@ -82,7 +82,7 @@ stream = ExtResource( 8 )
 volume_db = -15.0
 
 [node name="WorldComplete" parent="." instance=ExtResource( 4 )]
-position = Vector2( 11264, -64 )
+position = Vector2( 11264, -96 )
 next_world = "res://Levels/Level2T_Main.tscn"
 levelN = 1
 move_to = Vector2( 0, 20 )
@@ -109,7 +109,6 @@ DialogueNumber = "PTre"
 position = Vector2( 2560, 256 )
 scale = Vector2( 2.8, 2.8 )
 DialogueNumber = "PUJump"
-OneTime = true
 
 [node name="FlashBianco" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1760, 256 )
@@ -122,13 +121,11 @@ NoMusicVideoBox = true
 position = Vector2( 3200, 256 )
 scale = Vector2( 10, 6 )
 DialogueNumber = "PUColor"
-OneTime = true
 
 [node name="Pensiero1" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4384, 192 )
 scale = Vector2( 3, 3 )
 DialogueNumber = "PPensUno"
-OneTime = true
 
 [node name="Person" parent="." groups=[
 "People",
@@ -184,19 +181,18 @@ scale = Vector2( 2, 2 )
 position = Vector2( 10272, 224 )
 scale = Vector2( 6, 6 )
 DialogueNumber = "PPensDue"
-OneTime = true
 
 [node name="Choiceone" parent="." instance=ExtResource( 7 )]
 position = Vector2( 10592, 64 )
 scale = Vector2( 6, 6 )
 DialogueNumber = "PChoiceOne"
-OneTime = true
 NoSkip = true
 
 [node name="PAfterChoice" parent="." instance=ExtResource( 7 )]
-position = Vector2( 11168, -32 )
-scale = Vector2( 5, 5 )
+position = Vector2( 11104, -64 )
+scale = Vector2( 3, 5 )
 DialogueNumber = "PQuattro"
 IsChoiceBased = true
+
 [connection signal="body_entered" from="LevelCommands/ActivateJump" to="LevelCommands" method="_on_ActivateJump_body_entered"]
 [connection signal="body_entered" from="LevelCommands/ActivateColor" to="LevelCommands" method="_on_ActivateColor_body_entered"]

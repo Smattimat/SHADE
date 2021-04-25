@@ -9,10 +9,10 @@
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 5 )
 shader_param/OCTAVES = 4
-shader_param/red = Color( 0.803922, 0.0862745, 0.0862745, 1 )
-shader_param/yellow = Color( 0.976471, 0.756863, 0.0117647, 1 )
+shader_param/red = Color( 0.937255, 0.027451, 0.027451, 1 )
+shader_param/yellow = Color( 0.694118, 0.541176, 0.0117647, 1 )
 shader_param/grey = Color( 0.921569, 0.784314, 0.0588235, 1 )
-shader_param/black = Color( 0.901961, 0.0196078, 0.0196078, 1 )
+shader_param/black = Color( 0.839216, 0.0823529, 0.0470588, 1 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 64, 64 )
@@ -67,4 +67,5 @@ amount = 5
 lifetime = 4.0
 visibility_rect = Rect2( -64, -100, 128, 30 )
 process_material = SubResource( 5 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
