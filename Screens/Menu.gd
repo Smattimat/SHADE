@@ -59,35 +59,30 @@ func _on_Esci_pressed():
 
 
 func _on_Gioca_pressed():
-	$AnimationPlayer.play("ToLevels")
 	$MenuContainer/CreditsButton.set_block_signals(true)
 	$MenuContainer/VBoxContainer/Options.set_block_signals(true)
-	$MenuContainer/VBoxContainer/Options.set_block_signals(true)
+	$MenuContainer/VBoxContainer/Gioca.set_block_signals(true)
 	$MenuContainer/VBoxContainer/Esci.set_block_signals(true)
+	$AnimationPlayer.play("ToLevels")
+	
 
 func _on_Options_pressed():
-	$AnimationPlayer.play("SwipeToOption")
 	$MenuContainer/CreditsButton.set_block_signals(true)
 	$MenuContainer/VBoxContainer/Options.set_block_signals(true)
-	$MenuContainer/VBoxContainer/Options.set_block_signals(true)
+	$MenuContainer/VBoxContainer/Gioca.set_block_signals(true)
 	$MenuContainer/VBoxContainer/Esci.set_block_signals(true)
+	$AnimationPlayer.play("SwipeToOption")
+	
 
 func Option_to_Menu():
 	$AnimationPlayer.play("OptionToMenu")
-	$MenuContainer/CreditsButton.set_block_signals(false)
-	$MenuContainer/VBoxContainer/Options.set_block_signals(false)
-	$MenuContainer/VBoxContainer/Options.set_block_signals(false)
-	$MenuContainer/VBoxContainer/Esci.set_block_signals(false)
 	UpdateLanguage()
 	UpdateVolume()
 
 
 func _on_Back_pressed():
 	$AnimationPlayer.play("LevelsToMenu")
-	$MenuContainer/CreditsButton.set_block_signals(false)
-	$MenuContainer/VBoxContainer/Options.set_block_signals(false)
-	$MenuContainer/VBoxContainer/Options.set_block_signals(false)
-	$MenuContainer/VBoxContainer/Esci.set_block_signals(false)
+	
 
 func _on_Next_pressed():
 	$AnimationPlayer.play("NextLevels")
@@ -95,3 +90,11 @@ func _on_Next_pressed():
 
 func _on_Back2_pressed():
 	$AnimationPlayer.play("BackToLevels1")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name=="LevelsToMenu" or anim_name=="OptionToMenu":
+		$MenuContainer/CreditsButton.set_block_signals(false)
+		$MenuContainer/VBoxContainer/Options.set_block_signals(false)
+		$MenuContainer/VBoxContainer/Gioca.set_block_signals(false)
+		$MenuContainer/VBoxContainer/Esci.set_block_signals(false)
