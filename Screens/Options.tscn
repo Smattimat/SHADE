@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Asset/Buttons/left.png" type="Texture" id=1]
 [ext_resource path="res://Screens/Options.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Fonts/VideoTerminalScreen.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Asset/Buttons/right.png" type="Texture" id=7]
 [ext_resource path="res://Asset/Buttons/BTNCheckno.png" type="Texture" id=8]
+[ext_resource path="res://Asset/Buttons/BTNChecksi.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 48 )
@@ -36,7 +37,7 @@ __meta__ = {
 margin_left = 256.0
 margin_top = 32.0
 margin_right = 1024.0
-margin_bottom = 640.0
+margin_bottom = 544.0
 color = Color( 0.054902, 0.0431373, 0.129412, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -49,20 +50,20 @@ normal = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="LIT" type="TouchScreenButton" parent="."]
-position = Vector2( 800, 256 )
+position = Vector2( 800, 352 )
 scale = Vector2( 3, 2.66667 )
 normal = ExtResource( 3 )
 
 [node name="LUK" type="TouchScreenButton" parent="."]
-position = Vector2( 640, 256 )
+position = Vector2( 640, 352 )
 scale = Vector2( 3, 2.66667 )
 normal = ExtResource( 4 )
 
 [node name="LLanguage" type="Label" parent="."]
 margin_left = 320.0
-margin_top = 256.0
+margin_top = 352.0
 margin_right = 608.0
-margin_bottom = 320.0
+margin_bottom = 416.0
 custom_fonts/font = ExtResource( 5 )
 text = "Language"
 valign = 1
@@ -84,9 +85,9 @@ __meta__ = {
 
 [node name="LMusic" type="Label" parent="."]
 margin_left = 320.0
-margin_top = 352.0
+margin_top = 448.0
 margin_right = 470.0
-margin_bottom = 416.0
+margin_bottom = 512.0
 custom_fonts/font = ExtResource( 5 )
 text = "Music"
 valign = 1
@@ -96,9 +97,9 @@ __meta__ = {
 
 [node name="Music_Slider" type="HSlider" parent="."]
 margin_left = 640.0
-margin_top = 320.0
+margin_top = 416.0
 margin_right = 896.0
-margin_bottom = 384.0
+margin_bottom = 480.0
 rect_scale = Vector2( 1, 2 )
 max_value = 10.0
 value = 5.0
@@ -109,12 +110,12 @@ __meta__ = {
 }
 
 [node name="Music_UP" type="TouchScreenButton" parent="."]
-position = Vector2( 896, 352 )
+position = Vector2( 896, 448 )
 scale = Vector2( 0.64, 0.64 )
 normal = ExtResource( 7 )
 
 [node name="Music_Down" type="TouchScreenButton" parent="."]
-position = Vector2( 576, 352 )
+position = Vector2( 576, 448 )
 scale = Vector2( 0.64, 0.64 )
 normal = ExtResource( 1 )
 
@@ -122,7 +123,7 @@ normal = ExtResource( 1 )
 margin_left = 320.0
 margin_top = 160.0
 margin_right = 740.0
-margin_bottom = 256.0
+margin_bottom = 224.0
 custom_fonts/font = ExtResource( 5 )
 text = "Skip Tutorials"
 valign = 1
@@ -131,9 +132,26 @@ __meta__ = {
 }
 
 [node name="Skip_T" type="TouchScreenButton" parent="."]
-position = Vector2( 802.52, 171.969 )
+position = Vector2( 800, 160 )
 scale = Vector2( 0.666667, 0.666667 )
 normal = ExtResource( 8 )
+
+[node name="LParticelle" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 256.0
+margin_right = 620.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 5 )
+text = "Particelle"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles" type="TouchScreenButton" parent="."]
+position = Vector2( 800, 256 )
+scale = Vector2( 0.67, 0.67 )
+normal = ExtResource( 9 )
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="LIT" to="." method="_on_LIT_pressed"]
@@ -141,3 +159,4 @@ normal = ExtResource( 8 )
 [connection signal="pressed" from="Music_UP" to="." method="_on_Music_UP_pressed"]
 [connection signal="pressed" from="Music_Down" to="." method="_on_Music_Down_pressed"]
 [connection signal="pressed" from="Skip_T" to="." method="_on_Skip_T_pressed"]
+[connection signal="pressed" from="Particles" to="." method="_on_Particles_pressed"]

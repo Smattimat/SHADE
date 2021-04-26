@@ -15,6 +15,10 @@ func _ready():
 		$Skip_T.normal=Checked
 	else:
 		$Skip_T.normal=UnChecked
+	if(Settings.Particle==true):
+		$Particles.normal=Checked
+	else:
+		$Particles.normal=UnChecked
 	UpdateLanguage()
 
 func _on_Back_pressed():
@@ -28,12 +32,14 @@ func UpdateLanguage():
 		$LLanguage.text="Lingua"
 		$LMusic.text="Musica"
 		$LTutorial.text="Salta Tutorial"
+		$LParticelle.text="Particelle"
 	else:
 		$LUK.normal=UK
 		$LIT.normal=IT_B
 		$LLanguage.text="Language"
 		$LMusic.text="Music"
 		$LTutorial.text="Skip Tutorial"
+		$LParticelle.text="Particles"
 		
 
 
@@ -78,3 +84,12 @@ func _on_Skip_T_pressed():
 	else:
 		Settings.SkipTutorial=false
 		$Skip_T.normal=UnChecked
+
+
+func _on_Particles_pressed():
+	if(Settings.Particle==false):
+		Settings.Particle=true
+		$Particles.normal=Checked
+	else:
+		Settings.Particle=false
+		$Particles.normal=UnChecked

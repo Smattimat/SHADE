@@ -101,6 +101,7 @@ position = Vector2( 1056, 32 )
 normal = ExtResource( 6 )
 shape = SubResource( 7 )
 script = ExtResource( 11 )
+
 [connection signal="pressed" from="ColorRect/Neutral" to="." method="_on_Neutral_pressed"]
 [connection signal="pressed" from="ColorRect/Angry" to="." method="_on_Angry_pressed"]
 [connection signal="pressed" from="ColorRect/Happy" to="." method="_on_Happy_pressed"]

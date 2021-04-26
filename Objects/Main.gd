@@ -63,6 +63,7 @@ func on_Options():
 	
 
 func on_exit():
+	$Player/Canvas/HUD/Box/Color2.set_block_signals(true)
 	$Player/Canvas/HUD/Menuino.UpdateLanguage()
 	if get_tree().paused==true:
 		WasPaused=true
@@ -82,6 +83,7 @@ func on_exit():
 	
 	
 func on_resume():
+	$Player/Canvas/HUD/Box/Color2.set_block_signals(false)
 	if WasPaused==true:
 		get_tree().paused=true
 	else:

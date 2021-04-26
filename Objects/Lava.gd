@@ -9,7 +9,8 @@ func _ready():
 	timer.connect("timeout",self,"GameOver") 
 	add_child(timer)
 	if Lava==false:
-		$Particles2D.emitting=false
+		if(Settings.Particle==true):
+			$Particles2D.emitting=false
 		$LavaTune.stop()
 
 func _on_Area2D_body_entered(body):

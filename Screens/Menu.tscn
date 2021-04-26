@@ -805,8 +805,8 @@ margin_left = 1376.0
 margin_right = 1376.0
 
 [node name="TryAlternativeFinal" type="TouchScreenButton" parent="Options"]
-position = Vector2( 544, 448 )
-scale = Vector2( 2, 0.5 )
+position = Vector2( 416, 576 )
+scale = Vector2( 3.5, 0.75 )
 z_index = 1000
 normal = ExtResource( 27 )
 

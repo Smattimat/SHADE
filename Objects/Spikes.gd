@@ -13,7 +13,8 @@ func _on_Area2D_body_entered(body):
 		var dialogue = get_tree().get_root().get_node("Main").find_node("DialogueBox")
 		dialogue.visible=false
 		$Sound.play()
-		$Particles2D.emitting=true
+		if(Settings.Particle==true):
+			$Particles2D.emitting=true
 		
 func GameOver():
 	var Screen = get_tree().get_root().get_node("Main").find_node("GameOverScreen")	
