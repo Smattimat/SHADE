@@ -2,6 +2,7 @@ extends Control
 
 func _on_Resume_pressed():
  self.visible=false
+ 
 
 
 func UpdateLanguage():
@@ -14,12 +15,13 @@ func UpdateLanguage():
 
 
 func _on_Retry_pressed():
-	var main = get_tree().get_root().get_node("Main")
-	$LoadingScreen.loadScene(main.CurrentScene)
-	$BlackOvelay/ColorRect/Resume.set_block_signals(true)
-	$BlackOvelay/ColorRect/Retry.set_block_signals(true)
-	$BlackOvelay/ColorRect/Options.set_block_signals(true)
-	$BlackOvelay/ColorRect/ToMenu.set_block_signals(true)
+	if $BlackOvelay/ColorRect/ToMenu.visible==true:
+		var main = get_tree().get_root().get_node("Main")
+		$LoadingScreen.loadScene(main.CurrentScene)
+		$BlackOvelay/ColorRect/Resume.set_block_signals(true)
+		$BlackOvelay/ColorRect/Retry.set_block_signals(true)
+		$BlackOvelay/ColorRect/Options.set_block_signals(true)
+		$BlackOvelay/ColorRect/ToMenu.set_block_signals(true)
 
 func _on_ToMenu_pressed():
 	$LoadingScreen.loadScene("res://Screens/Menu.tscn")

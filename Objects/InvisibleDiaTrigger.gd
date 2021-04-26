@@ -4,7 +4,7 @@ extends Node2D
 #se troppo piccolo scalarlo in scena poi easy
 
 export var DialogueNumber="Puno"
-export var OneTime=false
+export var OneTime=true
 export var NoSkip=false
 export var NoMusicVideoBox=false
 export var IsChoiceBased=false

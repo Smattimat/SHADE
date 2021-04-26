@@ -116,7 +116,7 @@ func on_color(var col="Gray"):
 	
 	
 func _process(delta):
-	#print(Performance.get_monitor(Performance.TIME_FPS))
+	#print(Performance.get_monitor(Performance.TIME_FPS)) #print fps
 	#if Input.is_action_pressed("ui_right"):
 	#	Right=true
 	#else:

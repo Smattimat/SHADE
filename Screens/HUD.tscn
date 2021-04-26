@@ -93,5 +93,6 @@ visible = false
 
 [node name="Options" parent="." instance=ExtResource( 6 )]
 visible = false
+
 [connection signal="pressed" from="Box/Exit" to="." method="_on_Exit_pressed"]
 [connection signal="pressed" from="Box/Color2" to="." method="_on_Color2_pressed"]

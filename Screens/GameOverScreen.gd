@@ -7,6 +7,9 @@ func _on_GameOverScreen_visibility_changed():
 	$LoadingScreen.visible=false
 	$BlackOverlay/ColorRect/Retry.set_block_signals(false)
 	$BlackOverlay/ColorRect/ToMenu.set_block_signals(false)
+	var LevelMusic= get_tree().get_root().get_node("Main").find_node("LevelMusic")
+	LevelMusic.stop()
+	$Music.play()
 	get_tree().paused=true
 	if Settings.Language=="IT":
 		$BlackOverlay/ColorRect/Label2.text="Qualcuno e' morto.... forse a causa tua >:("

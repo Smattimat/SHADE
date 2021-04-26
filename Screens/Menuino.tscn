@@ -94,6 +94,7 @@ shape = SubResource( 5 )
 
 [node name="LoadingScreen" parent="." instance=ExtResource( 7 )]
 visible = false
+
 [connection signal="visibility_changed" from="." to="." method="_on_Menuino_visibility_changed"]
 [connection signal="pressed" from="BlackOvelay/ColorRect/Resume" to="." method="_on_Resume_pressed"]
 [connection signal="pressed" from="BlackOvelay/ColorRect/Retry" to="." method="_on_Retry_pressed"]

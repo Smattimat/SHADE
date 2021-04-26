@@ -88,5 +88,6 @@ stream = ExtResource( 6 )
 
 [node name="LoadingScreen" parent="." instance=ExtResource( 7 )]
 visible = false
+
 [connection signal="pressed" from="BlackOverlay/ColorRect/Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="BlackOverlay/ColorRect/Exit" to="." method="_on_Exit_pressed"]

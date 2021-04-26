@@ -27,13 +27,13 @@ func UpdateLanguage():
 		$LIT.normal=IT
 		$LLanguage.text="Lingua"
 		$LMusic.text="Musica"
-		$LTutorial.text="Salta Turorial"
+		$LTutorial.text="Salta Tutorial"
 	else:
 		$LUK.normal=UK
 		$LIT.normal=IT_B
 		$LLanguage.text="Language"
 		$LMusic.text="Music"
-		$LTutorial.text="Skip Turorial"
+		$LTutorial.text="Skip Tutorial"
 		
 
 

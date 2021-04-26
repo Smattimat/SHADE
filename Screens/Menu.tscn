@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Screens/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Scritte/ScrittaOptions.png" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Asset/Buttons/BTN5L.png" type="Texture" id=25]
 [ext_resource path="res://Asset/Buttons/BTN4L.png" type="Texture" id=26]
 [ext_resource path="res://Asset/Player & Person/Cubo Others Red.png" type="Texture" id=27]
+[ext_resource path="res://Asset/Sfondi/Autunno/Compile.png" type="Texture" id=28]
 [ext_resource path="res://Objects/EasterLevelTest.tscn" type="PackedScene" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -752,7 +753,7 @@ levelN = 10
 position = Vector2( 640, 592 )
 scale = Vector2( 0.996875, 1 )
 z_index = 1000
-texture = ExtResource( 19 )
+texture = ExtResource( 28 )
 
 [node name="AutUno" type="TouchScreenButton" parent="Levels1/Autunno" groups=[
 "LevelButtons",

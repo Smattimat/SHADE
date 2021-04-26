@@ -1,7 +1,7 @@
 {
   "1": {"type":"dialogue","name":"Player","Face":"Surprise","Text":"That was me!?!"},
   "2": {"type":"dialogue","name":"Player","Face":"Neutral","Text":"Now that i think about it, the Doctress said that working on the machine could cause some collateral effects..."},
-  "3": {"type":"dialogue","name":"Player","Face":"Neutral","Text":"Ed avendo lavorato al suo nucleo per anni, potrei aver sviluppato una sorta di resistenza... Per questo posso muovermi... "},
-  "4": {"type":"dialogue","name":"Player","Face":"Surprise","Text":"ed e' per questo che le altre persone del mio stesso colore mi imitano!"}
+  "3": {"type":"dialogue","name":"Player","Face":"Neutral","Text":"And because i worked for years on the machine, i could have developed some sort of resistence... that's why i can move... "},
+  "4": {"type":"dialogue","name":"Player","Face":"Surprise","Text":"And that's why other peolple of my color follow me!"}
     
 }

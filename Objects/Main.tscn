@@ -82,7 +82,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/OCTAVES = 4
+shader_param/OCTAVES = 5
 shader_param/red = Color( 0.513726, 1, 0.0313726, 1 )
 shader_param/yellow = Color( 0.937255, 0.988235, 0.0588235, 1 )
 shader_param/grey = Color( 0.207843, 0.662745, 0.0823529, 1 )
@@ -94,6 +94,9 @@ CurrentScene = "res://Objects/Main.tscn"
 
 [node name="LevelCommands" type="Node" parent="."]
 script = ExtResource( 17 )
+
+[node name="SkipTuPosition" type="Position2D" parent="."]
+position = Vector2( 1408, 512 )
 
 [node name="Person4" parent="." groups=[
 "People",
@@ -268,4 +271,3 @@ position = Vector2( 576, 544 )
 [node name="InvisibleDiaTrigger" parent="." instance=ExtResource( 16 )]
 position = Vector2( 768, 384 )
 DialogueNumber = "PTest"
-OneTime = true

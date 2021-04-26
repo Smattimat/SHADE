@@ -1,6 +1,8 @@
 extends Node
 
+
 func _ready():
+	$Options/ColorRect2.visible=false
 	$AnimationPlayer.play("FadeInMenù")
 	$Options.connect("gui_input",self,"Option_to_Menu")
 	Settings.load_Options()
