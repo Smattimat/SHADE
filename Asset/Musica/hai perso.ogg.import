@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hai perso.ogg-0c9b88101fa53d47ee9754b38f37daae.oggstr"
+
+[deps]
+
+source_file="res://Asset/Musica/hai perso.ogg"
+dest_files=[ "res://.import/hai perso.ogg-0c9b88101fa53d47ee9754b38f37daae.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
