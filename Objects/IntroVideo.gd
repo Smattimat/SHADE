@@ -1,8 +1,8 @@
 extends Node
 
 func _ready():
-	Settings.save_Level()  # per resettare opzioni a ogni avvio
-	Settings.save_Options()	
+	#Settings.save_Level()  # per resettare opzioni a ogni avvio
+	#Settings.save_Options()	
 	pass
 
 func _on_VideoPlayer_finished():

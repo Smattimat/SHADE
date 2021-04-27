@@ -13,6 +13,7 @@ var BadCount=0
 var SkipTutorial=false
 var Language="UK"
 var Music_Volume=5
+var Particle=true
 
 
 func save_Options():
@@ -21,6 +22,7 @@ func save_Options():
 	f.store_var(Language)
 	f.store_var(Music_Volume)
 	f.store_var(SkipTutorial)
+	f.store_var(Particle)
 	f.close()
 	
 	
@@ -31,6 +33,7 @@ func load_Options():
 		Language=f.get_var()
 		Music_Volume=f.get_var()
 		SkipTutorial=f.get_var()
+		Particle=f.get_var()
 		f.close()
 
 
