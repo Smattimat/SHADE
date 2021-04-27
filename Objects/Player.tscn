@@ -56,6 +56,7 @@ texture = ExtResource( 7 )
 
 [node name="Back3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.4, 0 )
+motion_offset = Vector2( 600, 0 )
 motion_mirroring = Vector2( 1280, 0 )
 
 [node name="S3" type="Sprite" parent="ParallaxBackground/Back3"]
@@ -65,6 +66,7 @@ texture = ExtResource( 6 )
 [node name="Back2" type="ParallaxLayer" parent="ParallaxBackground"]
 z_index = -1
 motion_scale = Vector2( 0.6, 0 )
+motion_offset = Vector2( 100, 0 )
 motion_mirroring = Vector2( 1280, 0 )
 
 [node name="S2" type="Sprite" parent="ParallaxBackground/Back2"]
@@ -73,6 +75,7 @@ texture = ExtResource( 5 )
 
 [node name="Back1" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.8, 0 )
+motion_offset = Vector2( -200, 0 )
 motion_mirroring = Vector2( 1280, 0 )
 
 [node name="S1" type="Sprite" parent="ParallaxBackground/Back1"]
