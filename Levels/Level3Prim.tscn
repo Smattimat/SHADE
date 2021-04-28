@@ -23,6 +23,7 @@ cell_size = Vector2( 128, 128 )
 collision_layer = 524289
 collision_mask = 2148007937
 format = 1
+tile_data = PoolIntArray( -262149, 20, 196608, -262148, 20, 196609, -262147, 20, 7, -196611, 20, 65541, -131077, 20, 196608, -131076, 20, 196609, -131075, 20, 196612, -196595, 20, 1, -196594, 20, 2, -65539, 20, 65541, -131062, 20, 5, -131060, 20, 6, -131059, 20, 65544, -131058, 20, 65547, -131057, 20, 7, -5, 20, 196608, -4, 20, 196609, -3, 20, 65543, -65526, 20, 8, -65525, 20, 9, -65524, 20, 65543, -65521, 20, 65541, 6, 21, 0, 9, 20, 1, 10, 20, 65540, 11, 20, 131074, 15, 20, 65541, 65544, 20, 1, 65545, 20, 65540, 65546, 20, 196619, 65547, 20, 131074, 65551, 20, 65541, 196602, 20, 196608, 196603, 20, 196609, 196604, 20, 196609, 196605, 20, 196609, 196606, 20, 196609, 196607, 20, 196609, 131072, 20, 196609, 131073, 20, 196609, 131074, 20, 196609, 131075, 20, 196609, 131076, 20, 196609, 131077, 20, 196609, 131078, 20, 196609, 131079, 20, 196609, 131080, 20, 65544, 131081, 20, 131072, 131082, 20, 131072, 131083, 20, 65547, 131084, 20, 196609, 131085, 20, 196609, 131086, 20, 196609, 131087, 20, 65543 )
 
 [node name="LayerTwo" type="TileMap" parent="."]
 scale = Vector2( 0.5, 0.5 )
@@ -32,13 +33,12 @@ cell_size = Vector2( 128, 128 )
 collision_layer = 524289
 collision_mask = 524289
 format = 1
-tile_data = PoolIntArray( -327685, 0, 196608, -327684, 0, 196609, -327683, 0, 7, -262147, 0, 65541, -196613, 0, 196608, -196612, 0, 196609, -196611, 0, 196612, -131075, 0, 65541, -65541, 0, 196608, -65540, 0, 196609, -65539, 0, 65543, 196602, 0, 196608, 196603, 0, 196609, 196604, 0, 196609, 196605, 0, 196609, 196606, 0, 196609, 196607, 0, 196609, 131072, 0, 196609, 131073, 0, 196609, 131074, 0, 196609, 131075, 0, 196609, 131076, 0, 196609, 131077, 0, 196609, 131078, 0, 196609, 131079, 0, 196610 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-BackLayer4Sprite = "res://Asset/Sfondi/Autunno/Autunno_alberi4.png"
-BackLayer3Sprite = "res://Asset/Sfondi/Autunno/Autunno_alberi3.png"
-BackLayer2Sprite = "res://Asset/Sfondi/Autunno/Autunno_alberi2.png"
-BackLayer1Sprite = "res://Asset/Sfondi/Autunno/Autunno_alberi.png"
+BackLayer4Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate.png"
+BackLayer3Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate4.png"
+BackLayer2Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate3.png"
+BackLayer1Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate2.png"
 LevelAt = "PrimTre"
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="."]
