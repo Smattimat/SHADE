@@ -54,6 +54,14 @@ func _ready():
 		c.ID=i
 		ChoicesArray.append(c)
 		i=i+1
+
+func UpdateLanguage():
+	if Settings.Language=="IT":
+		$LLicenses.text="<--Licenze"
+		$LCreditisviluppo.text="Crediti-->"
+	else:
+		$LLicenses.text="<--Licenses"
+		$LCreditisviluppo.text="Credits-->"
 		
 
 func on_toRetry():

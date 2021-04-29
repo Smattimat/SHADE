@@ -29,6 +29,7 @@ func UpdateLanguage():
 		$Levels1/Label.text="Worlds 1-3"
 		$Levels2/Label.text="Worlds 4-6"
 		$MenuContainer/CreditsButton/Label.text="Credits-TM"
+	$Main.UpdateLanguage()
 
 func UpdateLockedLevels():
 	var lvlBut=get_tree().get_nodes_in_group("LevelButtons")
