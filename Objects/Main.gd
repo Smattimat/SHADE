@@ -120,18 +120,18 @@ func on_color(var col="Gray"):
 	
 func _process(delta):
 	#print(Performance.get_monitor(Performance.TIME_FPS)) #print fps
-	if Input.is_action_pressed("ui_right"):
-		Right=true
-	else:
-		Right=false
-	if Input.is_action_pressed("ui_left"):
-		Left=true
-	else:
-		Left=false
-	if Input.is_action_pressed("ui_up"):
-		Jump=true	
-	else:
-		Jump=false
+	#if Input.is_action_pressed("ui_right"):
+	#	Right=true
+	#else:
+	#	Right=false
+	#if Input.is_action_pressed("ui_left"):
+	#	Left=true
+	#else:
+	#	Left=false
+	#if Input.is_action_pressed("ui_up"):
+	#	Jump=true	
+	#else:
+	#	Jump=false
 	#test 
 	var colorP = $Player.colorazion
 	var LevelPeople=get_tree().get_nodes_in_group("People")
