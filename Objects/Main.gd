@@ -48,8 +48,6 @@ func _ready():
 		c.ID=i
 		ChoicesArray.append(c)
 		i=i+1
-	if(Settings.SkipTutorial==true):
-		$Player.position=$SkipTuPosition.position
 		
 func Exit_Options():
 	$Player/Canvas/HUD/Menuino.visible=true
@@ -63,7 +61,9 @@ func on_Options():
 	
 
 func on_exit():
-	$Player/Canvas/HUD/Box/Color2.set_block_signals(true)
+	$Player/Canvas/HUD/Box.visible=false
+	$Player/Canvas/HUD/RightBox.visible=false
+	
 	$Player/Canvas/HUD/Menuino.UpdateLanguage()
 	if get_tree().paused==true:
 		WasPaused=true
@@ -83,7 +83,8 @@ func on_exit():
 	
 	
 func on_resume():
-	$Player/Canvas/HUD/Box/Color2.set_block_signals(false)
+	$Player/Canvas/HUD/Box.visible=true
+	$Player/Canvas/HUD/RightBox.visible=true
 	if WasPaused==true:
 		get_tree().paused=true
 	else:
@@ -119,18 +120,18 @@ func on_color(var col="Gray"):
 	
 func _process(delta):
 	#print(Performance.get_monitor(Performance.TIME_FPS)) #print fps
-	#if Input.is_action_pressed("ui_right"):
-	#	Right=true
-	#else:
-	#	Right=false
-	#if Input.is_action_pressed("ui_left"):
-	#	Left=true
-	#else:
-	#	Left=false
-	#if Input.is_action_pressed("ui_up"):
-	#	Jump=true	
-	#else:
-	#	Jump=false
+	if Input.is_action_pressed("ui_right"):
+		Right=true
+	else:
+		Right=false
+	if Input.is_action_pressed("ui_left"):
+		Left=true
+	else:
+		Left=false
+	if Input.is_action_pressed("ui_up"):
+		Jump=true	
+	else:
+		Jump=false
 	#test 
 	var colorP = $Player.colorazion
 	var LevelPeople=get_tree().get_nodes_in_group("People")

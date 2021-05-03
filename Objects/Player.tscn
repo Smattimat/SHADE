@@ -10,7 +10,8 @@
 [ext_resource path="res://Asset/InteractableThings/Chiave test.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.9, 31.9 )
+custom_solver_bias = 1.0
+extents = Vector2( 31.9, 32 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2147483667

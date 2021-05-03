@@ -10,6 +10,7 @@ func _ready():
 			but.setLocked()
 		else:
 			but.setUnlock()
+	
 
 func reapplytoHUD():
 	var Buttons=get_tree().get_nodes_in_group("ColorButtons")

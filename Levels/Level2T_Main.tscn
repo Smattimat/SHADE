@@ -15,18 +15,15 @@
 script = ExtResource( 1 )
 CurrentScene = "res://Levels/Level2T_Main.tscn"
 
-[node name="SkipTuPosition" type="Position2D" parent="."]
-position = Vector2( -672, 192 )
-
 [node name="LevelCommands" type="Node" parent="."]
 script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1632, 224 )
 BackLayer4Sprite = "res://Asset/Sfondi/Primavera/Prim4.png"
-BackLayer3Sprite = "res://Asset/Sfondi/Primavera/Prim3.png"
-BackLayer2Sprite = "res://Asset/Sfondi/Primavera/Prim2.png"
-BackLayer1Sprite = "res://Asset/Sfondi/Primavera/Prim1.png"
+BackLayer3Sprite = "res://Asset/Sfondi/Inverno/Invernomontagna.png"
+BackLayer2Sprite = "res://Asset/Sfondi/Inverno/invernoconnlina.png"
+BackLayer1Sprite = "res://Asset/Sfondi/Inverno/Invernofront.png"
 LevelAt = "PrimDue"
 
 [node name="Base" type="TileMap" parent="."]
@@ -83,6 +80,7 @@ move_to = Vector2( 0, 200 )
 position = Vector2( -1472, 192 )
 scale = Vector2( 4, 4 )
 DialogueNumber = "PDrone"
+TutorialNote = true
 
 [node name="DronePensiero" parent="." instance=ExtResource( 7 )]
 position = Vector2( -1088, 192 )

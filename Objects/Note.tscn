@@ -42,4 +42,5 @@ texture = ExtResource( 4 )
 [node name="MoveTween" type="Tween" parent="."]
 repeat = true
 playback/repeat = true
+
 [connection signal="body_entered" from="NoteArea" to="." method="_on_NoteArea_body_entered"]

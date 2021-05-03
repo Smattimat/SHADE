@@ -10,8 +10,6 @@
 script = ExtResource( 1 )
 CurrentScene = "res://Levels/Level3Prim.tscn"
 
-[node name="SkipTuPosition" type="Position2D" parent="."]
-
 [node name="LevelCommands" type="Node" parent="."]
 script = ExtResource( 2 )
 
@@ -35,10 +33,10 @@ collision_mask = 524289
 format = 1
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-BackLayer4Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate.png"
-BackLayer3Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate4.png"
-BackLayer2Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate3.png"
-BackLayer1Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate2.png"
+BackLayer4Sprite = "res://Asset/Sfondi/Inverno/Invernocielo.png"
+BackLayer3Sprite = "res://Asset/Sfondi/Inverno/Invernomontagna.png"
+BackLayer2Sprite = "res://Asset/Sfondi/Inverno/invernoconnlina.png"
+BackLayer1Sprite = "res://Asset/Sfondi/Inverno/Invernofront.png"
 LevelAt = "PrimTre"
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="."]

@@ -22,9 +22,6 @@ script = ExtResource( 1 )
 CurrentScene = "res://Levels/Level1T_Main.tscn"
 ChoiceN = 1
 
-[node name="SkipTuPosition" type="Position2D" parent="."]
-position = Vector2( 0, -800 )
-
 [node name="LevelCommands" type="Node" parent="."]
 script = ExtResource( 6 )
 
@@ -109,6 +106,7 @@ DialogueNumber = "PTre"
 position = Vector2( 2560, 256 )
 scale = Vector2( 2.8, 2.8 )
 DialogueNumber = "PUJump"
+TutorialNote = true
 
 [node name="FlashBianco" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1760, 256 )

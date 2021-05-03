@@ -96,11 +96,6 @@ func _physics_process(delta):
 	var stop = true
 	
 	
-	
-		
-	
-	
-			
 	if is_on_floor():
 		if on_air_time!=0:
 			stop = true

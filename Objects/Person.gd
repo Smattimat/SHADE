@@ -30,6 +30,12 @@ func ImitatePlayer(var imitate,var L,var R,var J):
 		Left=false
 		Right=false
 		Jump=false
+		var rest=fmod($KPerson.position.y, 32)
+		if (rest!=0):
+			if(rest<16):
+				$KPerson.position.y=$KPerson.position.y-rest
+			else:
+				$KPerson.position.y=$KPerson.position.y+(32-rest)
 		
 func UpdateColor(Col):
 	colorazion=Col

@@ -12,7 +12,7 @@ size = 40
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 20
+size = 25
 font_data = ExtResource( 2 )
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -39,19 +39,19 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="BlackOverlay"]
-margin_left = 384.0
+margin_left = 352.0
 margin_top = 256.0
-margin_right = 896.0
-margin_bottom = 456.0
+margin_right = 928.0
+margin_bottom = 480.0
 color = Color( 0.054902, 0.0431373, 0.129412, 0.784314 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="BlackOverlay/ColorRect"]
-margin_left = 160.0
+margin_left = 192.0
 margin_top = 32.0
-margin_right = 352.0
+margin_right = 384.0
 margin_bottom = 66.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
@@ -62,25 +62,25 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="BlackOverlay/ColorRect"]
-margin_left = 32.0
-margin_top = 96.0
-margin_right = 480.0
-margin_bottom = 113.0
+margin_top = 64.0
+margin_right = 576.0
+margin_bottom = 128.0
 custom_fonts/font = SubResource( 2 )
-text = "Qualcuno e' morto.... forse a causa tua >:("
+text = "Someone is dead...and maybe it's fault >:("
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Retry" type="TouchScreenButton" parent="BlackOverlay/ColorRect"]
-position = Vector2( 32, 128 )
+position = Vector2( 64, 128 )
 scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 1 )
 shape = SubResource( 3 )
 
 [node name="ToMenu" type="TouchScreenButton" parent="BlackOverlay/ColorRect"]
-position = Vector2( 288, 128 )
+position = Vector2( 320, 128 )
 scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 3 )
 shape = SubResource( 4 )
