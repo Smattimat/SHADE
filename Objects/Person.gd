@@ -93,6 +93,7 @@ func _physics_process(delta):
 			jumping = false
 			if !Jump:
 				velocity.y=0
+			
 				
 		if $KPerson.is_on_ceiling():
 			jumping = false
@@ -136,6 +137,8 @@ func _physics_process(delta):
 			jumping = true
 	
 		var snap = Vector2.DOWN * 32 if !jumping else Vector2.ZERO
+
+		
 		# Integrate forces to velocity
 		velocity += force * delta
 		$KPerson.move_and_slide_with_snap(velocity, snap,Vector2(0, -1))	
@@ -143,10 +146,12 @@ func _physics_process(delta):
 			collision = $KPerson.get_slide_collision(i)
 			if collision.collider.name=="MPlatform":
 				pass
-			elif(collision.position.y > $KPerson.position.y):
+			elif(collision.position.y > $KPerson.position.y ):
 				$KPerson.move_and_collide( - $KPerson.get_floor_velocity() * delta)
-				break
+			
 				
+		
+		
 		on_air_time += delta
 		prev_jump_pressed = Jump
 	else:
