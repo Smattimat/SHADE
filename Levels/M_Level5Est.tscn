@@ -8,7 +8,7 @@
 
 [node name="Main" type="Node"]
 script = ExtResource( 4 )
-CurrentScene = "res://Levels/Level5Prim.tscn"
+CurrentScene = "res://Levels/M_Level5Est.tscn"
 
 [node name="LevelCommands" type="Node" parent="."]
 script = ExtResource( 3 )
@@ -21,7 +21,7 @@ cell_size = Vector2( 128, 128 )
 collision_layer = 524289
 collision_mask = 524289
 format = 1
-tile_data = PoolIntArray( -327686, 0, 6, -327685, 0, 196609, -327684, 0, 196609, -327683, 0, 196610, -262150, 0, 65541, -196614, 0, 65541, -131078, 0, 65542, -131077, 0, 196609, -131076, 0, 196609, -131075, 0, 7, -65539, 0, 65541, -6, 0, 196608, -5, 0, 196609, -4, 0, 196609, -3, 0, 65543 )
+tile_data = PoolIntArray( -327686, 20, 6, -327685, 20, 196609, -327684, 20, 196609, -327683, 20, 196610, -262150, 20, 65541, -196614, 20, 65541, -131078, 20, 65542, -131077, 20, 196609, -131076, 20, 196609, -131075, 20, 7, -65539, 20, 65541, -6, 20, 196608, -5, 20, 196609, -4, 20, 196609, -3, 20, 65543 )
 
 [node name="LayerTwo" type="TileMap" parent="."]
 scale = Vector2( 0.5, 0.5 )
@@ -31,16 +31,15 @@ cell_size = Vector2( 128, 128 )
 collision_layer = 524289
 collision_mask = 524289
 format = 1
-tile_data = PoolIntArray( 196602, 0, 196608, 196603, 0, 196609, 196604, 0, 196609, 196605, 0, 196609, 196606, 0, 196609, 196607, 0, 196609, 131072, 0, 196609, 131073, 0, 196609, 131074, 0, 196609, 131075, 0, 196609, 131076, 0, 196609, 131077, 0, 196609, 131078, 0, 196609, 131079, 0, 196610 )
+tile_data = PoolIntArray( 196602, 20, 196608, 196603, 20, 196609, 196604, 20, 196609, 196605, 20, 196609, 196606, 20, 196609, 196607, 20, 196609, 131072, 20, 196609, 131073, 20, 196609, 131074, 20, 196609, 131075, 20, 196609, 131076, 20, 196609, 131077, 20, 196609, 131078, 20, 196609, 131079, 20, 196610 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-LevelAt = "PrimCinque"
+LevelAt = "EstCinque"
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="."]
 
 [node name="WorldComplete" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 0 )
-next_world = "res://Levels/M_Level1Est.tscn"
 levelN = 5
 move_to = Vector2( 0, 20 )
 speed = 0.7
