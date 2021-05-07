@@ -12,6 +12,9 @@ export var delay=0.1
 var UPSkin = preload("res://Asset/InteractableThings/PressurePlateTestUp.png")
 var DownSkin = preload("res://Asset/InteractableThings/PressurePlateTestDown.png")
 
+var PushedDown=preload("res://Asset/SoundEffect/PressureDown.wav")
+var BackUp= preload("res://Asset/SoundEffect/PressureUp.wav")
+
 func _ready():
 	$Area2D/Sprite.texture=UPSkin;
 	timer.wait_time=delay
@@ -21,9 +24,13 @@ func _ready():
 func update():
 	if Pressed==true:
 		$Area2D/Sprite.texture=UPSkin
-		Pressed=false
+		$SEffect.stream=PushedDown
+		$SEffect.play()
+		Pressed=false		
 	else:
 		$Area2D/Sprite.texture=DownSkin
+		$SEffect.stream=BackUp
+		$SEffect.play()
 		Pressed=true
 	differentstate=true
 	timer.stop()
