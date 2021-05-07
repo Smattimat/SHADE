@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PressureDown.wav-0e27f67398a1420f7b6b297d3418b9d4.sample"
+
+[deps]
+
+source_file="res://Asset/SoundEffect/PressureDown.wav"
+dest_files=[ "res://.import/PressureDown.wav-0e27f67398a1420f7b6b297d3418b9d4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
