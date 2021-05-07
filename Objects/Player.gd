@@ -162,11 +162,6 @@ func _physics_process(delta):
 		elif(collision.position.y > position.y ):
 			move_and_collide( - get_floor_velocity() * delta)
 
-	
-	
-	
-	
-				
 	on_air_time += delta
 	prev_jump_pressed = Jump
 	

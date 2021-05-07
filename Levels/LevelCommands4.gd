@@ -1,5 +1,4 @@
 extends Node
-#LevelCommands Livello 3
 
 var UnlockedColors=2
 

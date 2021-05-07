@@ -41,7 +41,7 @@ scale = Vector2( 4, 2 )
 shape = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, -640 )
+position = Vector2( 0, -704 )
 BackLayer4Sprite = "res://Asset/Sfondi/Primavera/Prim4.png"
 BackLayer3Sprite = "res://Asset/Sfondi/Primavera/Prim3.png"
 BackLayer2Sprite = "res://Asset/Sfondi/Primavera/Prim2.png"

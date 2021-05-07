@@ -116,11 +116,11 @@ colorazion = "Red"
 [node name="Person" parent="." groups=[
 "People",
 ] instance=ExtResource( 4 )]
-position = Vector2( 2016, 608 )
+position = Vector2( 2144, 608 )
 colorazion = "Red"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1728, 544 )
+position = Vector2( 256, 352 )
 z_index = -1
 BackLayer4Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate.png"
 BackLayer3Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate4.png"
@@ -129,7 +129,7 @@ BackLayer1Sprite = "res://Asset/Sfondi/Estate/Sfondo_Estate2.png"
 BackLayer1Scale = 2.0
 
 [node name="SlideMovingPlatform" parent="." instance=ExtResource( 6 )]
-position = Vector2( 992, 416 )
+position = Vector2( 1024, 416 )
 move_to = Vector2( 0, 80 )
 
 [node name="Passage2" parent="." groups=[
