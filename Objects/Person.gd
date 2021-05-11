@@ -25,6 +25,7 @@ func ImitatePlayer(var imitate,var L,var R,var J):
 		Left=L
 		Right=R
 		Jump=J
+		$KPerson/CollisionShape2D.scale.y=1
 	else:
 		Muovi=false
 		Left=false
@@ -36,6 +37,8 @@ func ImitatePlayer(var imitate,var L,var R,var J):
 				$KPerson.position.y=$KPerson.position.y-rest
 			else:
 				$KPerson.position.y=$KPerson.position.y+(32-rest)
+			$KPerson/CollisionShape2D.scale.y=0.99
+			$KPerson.position.y=$KPerson.position.y-0.32
 		
 func UpdateColor(Col):
 	colorazion=Col

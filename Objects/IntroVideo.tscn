@@ -61,7 +61,7 @@ margin_bottom = 720.0
 rect_min_size = Vector2( 1280, 720 )
 stream = ExtResource( 1 )
 autoplay = true
-buffering_msec = 100
+buffering_msec = 1000
 __meta__ = {
 "_edit_use_anchors_": false
 }
