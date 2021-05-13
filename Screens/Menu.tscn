@@ -437,7 +437,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back2" type="TouchScreenButton" parent="Levels2"]
+[node name="Back2" type="TouchScreenButton" parent="Levels2" groups=[
+"ActButtons",
+]]
 scale = Vector2( 0.96, 0.96 )
 z_index = 1000
 normal = ExtResource( 8 )
@@ -622,13 +624,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="TouchScreenButton" parent="Levels1"]
+[node name="Back" type="TouchScreenButton" parent="Levels1" groups=[
+"ActButtons",
+]]
 scale = Vector2( 0.96, 0.96 )
 z_index = 1000
 normal = ExtResource( 8 )
 shape = SubResource( 2 )
 
-[node name="Next" type="TouchScreenButton" parent="Levels1"]
+[node name="Next" type="TouchScreenButton" parent="Levels1" groups=[
+"ActButtons",
+]]
 position = Vector2( 1184, 0 )
 scale = Vector2( 1, 0.96 )
 z_index = 1000
