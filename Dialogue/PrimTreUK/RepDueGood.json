@@ -1,0 +1,9 @@
+{
+  "1" : {"type":"image","name": "Lettera.png" },
+  "2" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"As it seems it couldn't send it... but... what's that under the sheet?" },
+  "3" : {"type":"image","name": "family.jpg" },
+  "4" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"I believe this is the picture it's searching for... I should take it back to it." },
+  "5" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"You obtained a picture." }
+  
+
+}

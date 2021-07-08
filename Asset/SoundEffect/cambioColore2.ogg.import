@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cambioColore2.ogg-b31b18aa26110da616664d1333fc0e43.oggstr"
+
+[deps]
+
+source_file="res://Asset/SoundEffect/cambioColore2.ogg"
+dest_files=[ "res://.import/cambioColore2.ogg-b31b18aa26110da616664d1333fc0e43.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

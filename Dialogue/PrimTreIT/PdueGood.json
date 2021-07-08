@@ -1,0 +1,8 @@
+{
+  "1" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"Hai bisogno di aiuto?" },
+  "2" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"No... vo...io -olo... foto..." },
+  "3" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Una foto...? E dove si trova?" },
+  "4" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"Lab...rato... Lab...rato..." },
+  "5" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"Va bene, torno subito" }
+
+}

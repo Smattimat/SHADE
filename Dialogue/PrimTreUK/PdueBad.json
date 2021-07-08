@@ -1,0 +1,9 @@
+{
+  "1" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"How far is the Laboratory?" },
+  "2" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"Aft...r..." },
+  "3" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"After...? How much will it take?!" },
+  "4" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"Tw...th..three... fo-" },
+  "5" : {"type":"dialogue","name": "Player","Face":"Angry","Text":"Nevermind." }
+
+
+}

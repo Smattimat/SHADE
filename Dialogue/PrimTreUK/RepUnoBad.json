@@ -1,0 +1,13 @@
+{
+  "1" : {"type":"image","name": "RapTredCop.png" },
+  "2" : {"type":"image","name": "ReportIncend.png" },
+  "3" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"... nothing useful... wait!" },
+  "4" : {"type":"image","name": "map.png" },
+  "5" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"These should be the Laboratories..." },
+  "6" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"There should be something important here... what if there's the Weapon?! If so, the Doctress should be there... " },
+  "7" : {"type":"dialogue","name": "Player","Face":"Happy","Text":"*laugh*... excellent... EXCELLENT! *laugh*" },
+   "8" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"You've unlocked the green color, happiness" },
+   "9" : {"type":"dialogue","name": "Player","Face":"Happy","Text":"I gotta go ahead... " }
+  
+
+}

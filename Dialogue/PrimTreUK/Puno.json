@@ -1,0 +1,9 @@
+{
+  "1" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"More people... This place is more inhabited than I thought!" },
+  "2" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"inal...ly so...one..." },
+  "3" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"So it can talk! Even if it's hard for it..." },
+  "4" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"Where are we? What happened to the Laboratories? How long since the last experiment?" },
+  "5" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"I... -sti... Lab...rato... later!" },
+  "6" : {"type":"choice","Text":"So there's a Laboratory...","id":"0","good":"Do you need help?","bad":"How far is the Laboratory?"}
+
+}

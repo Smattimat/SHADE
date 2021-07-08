@@ -1,0 +1,6 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"A floating cube!?"}, 
+  "2":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"It should fall down if I change my color to its color..."},
+  "3":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"What if I jump and change color when it's in mid-air? Maybe it will remain still and float there!"},
+  "4":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"This could help me climb over higher obstacles..."}
+}

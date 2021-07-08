@@ -1,0 +1,9 @@
+{
+  "1" : {"type":"image","name": "Lettera.png" },
+  "2" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"A quanto pare non e' riuscito a spedirla...Ma... cosa c'e' sotto al foglio?" },
+  "3" : {"type":"image","name": "family.jpg" },
+  "4" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"Credo che questa sia la foto che sto cercando...Dovrei riportargliela" },
+  "5" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Hai ottenuto una foto" }
+  
+
+}

@@ -1,0 +1,9 @@
+{
+  "1" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"Di nuovo altre persone...Allora questo posto e' piu' abitato di quanto pensassi!" },
+  "2" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"...inal...nte qu...uno..." },
+  "3" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"Allora riesce a parlare! Anche se a fatica..." },
+  "4" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"Dove ci troviamo? Cos'e' successo ai laboratori? Quanto tempo e' passato dall'ultimo esperimento?" },
+  "5" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"Io... -anco... Lab...rato... dopo!" },
+  "6":{"type":"choice","Text":"Quindi dopo ci sarebbe un laboratorio...","id":"0","good":"Hai bisogno di aiuto?","bad":"Quanto e' distante il laboratorio?"}
+
+}

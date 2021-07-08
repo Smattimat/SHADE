@@ -1,0 +1,7 @@
+{
+  "1" : {"type":"image","name": "RapTredCop.png" },
+  "2" : {"type":"image","name": "ReportIncend.png" },
+  "3" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Non sembra esserci alcuna foto qui'... devo continuare a cercare." }
+ 
+
+}

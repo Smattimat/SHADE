@@ -5,7 +5,7 @@
   "4":{"type":"dialogue","name":"Person","Face":"Red","Text":"..."},
   "5":{"type":"dialogue","name":"Player","Face":"Sad","Text":"Non e' in grado di parlare..."},
   "6":{"type":"dialogue","name":"Player","Face":"Depre","Text":"Cosa mi e' passato per la testa partecipando alla creazione di quella macch-"},
-  "7":{"type":"video","name":"Intro-5.0.ogv"},
+  "7":{"type":"video","name":"FLASHBACK_2.ogv"},
   "8":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"La dottoressa... e' vero!"},
   "9":{"type":"dialogue","name":"Player","Face":"Angry","Text":"Lei ci ha traditi! Tutti quanti!"},
   "10":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Usa il tasto colorato per controllare le tue emozioni"}

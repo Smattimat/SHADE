@@ -1,0 +1,6 @@
+{
+   "1" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Mi chiedo chi comandi tutti questi droni..." },
+   "2" : {"type":"dialogue","name": "Player","Face":"Sad","Text":"Sembra che stiano aumentando sempre di piu'... e se fosse lei..." },
+   "3" : {"type":"dialogue","name": "Player","Face":"Angry","Text":"Probabilmente mi sta tenendo d'occhio... devo distruggerli il prima possibile!" }
+   
+}

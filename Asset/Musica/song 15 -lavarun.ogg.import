@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/song 15 -lavarun.ogg-cae3de910ad3151442b28e013461dcbf.oggstr"
+
+[deps]
+
+source_file="res://Asset/Musica/song 15 -lavarun.ogg"
+dest_files=[ "res://.import/song 15 -lavarun.ogg-cae3de910ad3151442b28e013461dcbf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

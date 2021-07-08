@@ -21,9 +21,9 @@ script = ExtResource( 5 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1632, 224 )
 BackLayer4Sprite = "res://Asset/Sfondi/Primavera/Prim4.png"
-BackLayer3Sprite = "res://Asset/Sfondi/Inverno/Invernomontagna.png"
-BackLayer2Sprite = "res://Asset/Sfondi/Inverno/invernoconnlina.png"
-BackLayer1Sprite = "res://Asset/Sfondi/Inverno/Invernofront.png"
+BackLayer3Sprite = "res://Asset/Sfondi/Primavera/Prim3.png"
+BackLayer2Sprite = "res://Asset/Sfondi/Primavera/Prim2.png"
+BackLayer1Sprite = "res://Asset/Sfondi/Primavera/Prim1.png"
 LevelAt = "PrimDue"
 
 [node name="Base" type="TileMap" parent="."]

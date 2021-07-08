@@ -1,0 +1,20 @@
+{
+  "1" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Thanks... *crying*... thanks!" },
+  "2" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"Have you switched color...? And now you are able to talk!?" },
+  "3" : {"type":"trigger" },
+  "4" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Both of them talk for a long time to figure out what happened and where is the doctress..." },
+  "5" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"So the doctress is at the sixth Laboratory..." },
+  "6" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Or so t-his is wh-at I reme-mber... She sp-ent most of h-er tim...e the...re." },
+  "7" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"... Very well! Thanks, really!" },
+  "8" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"You have unlocked the green color, happiness and hope!" },
+  "9" : {"type":"trigger" },
+  "10" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Yo-u've ch..nged col-or..." },
+  "11" : {"type":"dialogue","name": "Player","Face":"Happy","Text":"*laughs* Ask me if I am happy! *laughs*" },
+  "12" : {"type":"dialogue","name": "Player","Face":"Happy","Text":"Would you like to come with me? I can't remember anything so... " },
+  "13" : {"type":"dialogue","name": "Person","Face":"Green","Text":"I- I'd really like to... but I ca-n't mo-ve!" },
+  "14" : {"type":"dialogue","name": "Player","Face":"Happy","Text":"I can control your body, we'll move together! " },
+  "15" : {"type":"trigger" },
+  "16" : {"type":"dialogue","name": "Person","Face":"Green","Text":"R-real..ly?! T-thanks!" }
+
+
+}

@@ -1,0 +1,9 @@
+{
+  "1" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Quanto e' distante il laboratorio?" },
+  "2" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"Do...o..." },
+  "3" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Dopo...? Quanto dopo?!" },
+  "4" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"Do...tr..tre... fo-" },
+  "5" : {"type":"dialogue","name": "Player","Face":"Angry","Text":"Lascia perdere!" }
+
+
+}

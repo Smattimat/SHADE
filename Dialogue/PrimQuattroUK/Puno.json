@@ -1,0 +1,6 @@
+{
+   "1" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"I wonder who is piloting all those drones..." },
+   "2" : {"type":"dialogue","name": "Player","Face":"Sad","Text":"I keep on finding more and more of them... maybe it's her...the doctress" },
+   "3" : {"type":"dialogue","name": "Player","Face":"Angry","Text":"She is probably watching me... i need to destroy them as soon as possible!" }
+   
+}

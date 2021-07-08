@@ -1,0 +1,8 @@
+{
+  "1" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"Do you need help?" },
+  "2" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"No... I wa...t -nly... picture..." },
+  "3" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"A picture...? Where is it?" },
+  "4" : {"type":"dialogue","name": "Person","Face":"Gray","Text":"Lab...rato... Lab...rato..." },
+  "5" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"Okay, I'll be back as soon as possible." }
+
+}

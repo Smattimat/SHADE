@@ -1,0 +1,6 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"Un cubo sospeso!? "}, 
+  "2":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"Se dovessi diventare del suo colore dovrebbe cadere... "},
+  "3":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"Ma se poi saltassi e cambiassi colore mentre lui e' a mezz'aria rimarrebbe li sospeso!  "},
+  "4":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"Questo potrebbe aiutarmi a scavalcare ostacoli piu' alti... "}
+}

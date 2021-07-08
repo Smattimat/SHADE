@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lava.mp3-7f7c1a91da84280026cf3c7bdc662eeb.mp3str"
+
+[deps]
+
+source_file="res://Asset/SoundEffect/lava/lava.mp3"
+dest_files=[ "res://.import/lava.mp3-7f7c1a91da84280026cf3c7bdc662eeb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

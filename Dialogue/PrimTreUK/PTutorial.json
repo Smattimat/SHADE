@@ -1,0 +1,4 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"This is strange... a door in the middle of nowhere!?"}, 
+  "2":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"I think that we can open it by getting on that switch."}
+}

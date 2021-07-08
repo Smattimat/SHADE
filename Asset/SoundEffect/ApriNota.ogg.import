@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ApriNota.ogg-f007d19b766f4578999a03aa03188608.oggstr"
+
+[deps]
+
+source_file="res://Asset/SoundEffect/ApriNota.ogg"
+dest_files=[ "res://.import/ApriNota.ogg-f007d19b766f4578999a03aa03188608.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

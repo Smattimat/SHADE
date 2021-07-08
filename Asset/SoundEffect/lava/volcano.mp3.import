@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/volcano.mp3-85971c50500aea53a2c0b267de57673d.mp3str"
+
+[deps]
+
+source_file="res://Asset/SoundEffect/lava/volcano.mp3"
+dest_files=[ "res://.import/volcano.mp3-85971c50500aea53a2c0b267de57673d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
