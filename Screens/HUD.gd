@@ -14,6 +14,7 @@ func _On_selection(var col="Gray"):
 	$RightBox/Left.visible=true
 	$RightBox/Right.visible=true
 	$Box/Color2.visible=true
+	$SoundEffect.play()
 	
 func _on_Exit_pressed():
 	$Menuino.visible=true

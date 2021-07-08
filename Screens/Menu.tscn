@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Screens/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Scritte/ScrittaOptions.png" type="Texture" id=2]
@@ -29,6 +29,9 @@
 [ext_resource path="res://Asset/Player & Person/Cubo Others Red.png" type="Texture" id=27]
 [ext_resource path="res://Asset/Sfondi/Autunno/Compile.png" type="Texture" id=28]
 [ext_resource path="res://Objects/EasterLevelTest.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Asset/Sfondi/Inferno/Sfondo lungo .png" type="Texture" id=30]
+[ext_resource path="res://Fonts/VideoTerminalScreen.ttf" type="DynamicFontData" id=31]
+[ext_resource path="res://Asset/Sfondi/Paradiso/Paradiso.png" type="Texture" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 48 )
@@ -39,10 +42,14 @@ extents = Vector2( 48, 48 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 48, 48 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 31 )
+
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 150, 50 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Levels2:rect_position")
 tracks/0/interp = 1
@@ -68,7 +75,7 @@ tracks/1/keys = {
 "values": [ Vector2( -1376, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("MenuContainer/VBoxContainer/Gioca:visible")
 tracks/0/interp = 1
@@ -142,7 +149,7 @@ tracks/5/keys = {
 "values": [ Vector2( 736, 184 ), Vector2( -192, 184 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Levels1:rect_position")
 tracks/0/interp = 1
@@ -239,8 +246,32 @@ tracks/7/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
+tracks/8/type = "value"
+tracks/8/path = NodePath("Label:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1344, 672 ), Vector2( 0, 672 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Label:margin_left")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -1344.0, 10.0 ]
+}
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Levels1:rect_position")
 tracks/0/interp = 1
@@ -266,7 +297,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1408, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Options:rect_position")
 tracks/0/interp = 1
@@ -364,7 +395,7 @@ tracks/7/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("MenuContainer:rect_position")
 tracks/0/interp = 2
@@ -390,7 +421,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1376, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("MenuContainer:rect_position")
 tracks/0/interp = 1
@@ -414,6 +445,30 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1408, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 672 ), Vector2( -1344, 672 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label:margin_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 10.0, 10.0 ]
 }
 
 [node name="Main" type="Node"]
@@ -509,7 +564,7 @@ levelN = 20
 [node name="Paradiso" type="Sprite" parent="Levels2"]
 position = Vector2( 640, 400 )
 z_index = 1000
-texture = ExtResource( 19 )
+texture = ExtResource( 32 )
 
 [node name="ParUno" type="TouchScreenButton" parent="Levels2/Paradiso" groups=[
 "LevelButtons",
@@ -563,7 +618,7 @@ Par = true
 [node name="Inferno" type="Sprite" parent="Levels2"]
 position = Vector2( 640, 592 )
 z_index = 1000
-texture = ExtResource( 19 )
+texture = ExtResource( 30 )
 
 [node name="InfUno" type="TouchScreenButton" parent="Levels2/Inferno" groups=[
 "LevelButtons",
@@ -817,6 +872,17 @@ scale = Vector2( 3.5, 0.75 )
 z_index = 1000
 normal = ExtResource( 27 )
 
+[node name="Label" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 672.0
+margin_right = 118029.0
+margin_bottom = 722.0
+custom_fonts/font = SubResource( 4 )
+text = "Version: Demo 0.5.1 (3 levels)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MenuContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -828,7 +894,7 @@ __meta__ = {
 [node name="CreditsButton" type="TouchScreenButton" parent="MenuContainer"]
 position = Vector2( 960, 576 )
 z_index = 1000
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Label" type="Label" parent="MenuContainer/CreditsButton"]
 margin_top = 32.0
@@ -847,8 +913,8 @@ margin_right = 640.0
 margin_bottom = 360.0
 
 [node name="Sprite" type="Sprite" parent="MenuContainer/VBoxContainer"]
-position = Vector2( 0, -240 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 0.173162, -245.6 )
+scale = Vector2( 0.346362, 0.321875 )
 z_index = 1000
 texture = ExtResource( 5 )
 
@@ -874,15 +940,16 @@ z_index = 1000
 normal = ExtResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/BackToLevels1 = SubResource( 5 )
-"anims/FadeInMenù" = SubResource( 6 )
-anims/LevelsToMenu = SubResource( 7 )
-anims/NextLevels = SubResource( 8 )
-anims/OptionToMenu = SubResource( 9 )
-anims/SwipeToOption = SubResource( 10 )
-anims/ToLevels = SubResource( 11 )
+anims/BackToLevels1 = SubResource( 6 )
+"anims/FadeInMenù" = SubResource( 7 )
+anims/LevelsToMenu = SubResource( 8 )
+anims/NextLevels = SubResource( 9 )
+anims/OptionToMenu = SubResource( 10 )
+anims/SwipeToOption = SubResource( 11 )
+anims/ToLevels = SubResource( 12 )
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 4 )
 volume_db = -10.0
 

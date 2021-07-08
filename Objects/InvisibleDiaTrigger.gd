@@ -9,6 +9,7 @@ export var NoSkip=false
 export var NoMusicVideoBox=false
 export var IsChoiceBased=false
 export var ChoiceId=0
+export var NeedsPhoto=false
 
 export var TutorialNote=false
 
@@ -26,23 +27,29 @@ func _on_Area_body_entered(body):
 			if OneTime==true and Used==true:
 				pass
 			else:
-				var Dialogue = get_tree().get_root().get_node("Main").find_node("NarrationInterface")
-				Dialogue.visible = true
-				if IsChoiceBased==true:
-					var Main = get_tree().get_root().get_node("Main")
-					var c=Main.ChoicesArray[ChoiceId]
-					if c.Good==true:
-						Dialogue.Start(DialogueNumber,NoSkip,NoMusicVideoBox,IsChoiceBased,"Good")
-					else:
-						Dialogue.Start(DialogueNumber,NoSkip,NoMusicVideoBox,IsChoiceBased,"Bad")	
-				else:			
-					Dialogue.Start(DialogueNumber,NoSkip,NoMusicVideoBox,IsChoiceBased,"a")
-				var Right = get_tree().get_root().get_node("Main").find_node("Right")
-				var Left = get_tree().get_root().get_node("Main").find_node("Left")
-				var Jump = get_tree().get_root().get_node("Main").find_node("Jump")
-				var Color2 = get_tree().get_root().get_node("Main").find_node("Color2")
-				Right.visible=false
-				Left.visible=false
-				Jump.visible=false
-				Color2.visible=false
-			Used=true
+				if NeedsPhoto==true and body.hasPhoto==false:
+					pass
+				else:
+					if NeedsPhoto==true:
+						body.hasPhoto=false
+						body.UpdatePhoto()
+					var Dialogue = get_tree().get_root().get_node("Main").find_node("NarrationInterface")
+					Dialogue.visible = true
+					if IsChoiceBased==true:
+						var Main = get_tree().get_root().get_node("Main")
+						var c=Main.ChoicesArray[ChoiceId]
+						if c.Good==true:
+							Dialogue.Start(DialogueNumber,NoSkip,NoMusicVideoBox,IsChoiceBased,"Good")
+						else:
+							Dialogue.Start(DialogueNumber,NoSkip,NoMusicVideoBox,IsChoiceBased,"Bad")	
+					else:			
+						Dialogue.Start(DialogueNumber,NoSkip,NoMusicVideoBox,IsChoiceBased,"a")
+					var Right = get_tree().get_root().get_node("Main").find_node("Right")
+					var Left = get_tree().get_root().get_node("Main").find_node("Left")
+					var Jump = get_tree().get_root().get_node("Main").find_node("Jump")
+					var Color2 = get_tree().get_root().get_node("Main").find_node("Color2")
+					Right.visible=false
+					Left.visible=false
+					Jump.visible=false
+					Color2.visible=false
+					Used=true

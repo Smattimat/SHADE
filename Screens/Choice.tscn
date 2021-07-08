@@ -1,22 +1,23 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Fonts/VideoTerminalScreen.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Asset/Sfondi/background-1.png" type="Texture" id=2]
 [ext_resource path="res://Screens/Choice.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/Terminal2.tres" type="DynamicFont" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 176, 82 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 40
 font_data = ExtResource( 1 )
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 128, 82 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 40
-font_data = ExtResource( 1 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 128, 82 )
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 176, 82 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 40
@@ -42,7 +43,7 @@ __meta__ = {
 margin_left = 224.0
 margin_top = 32.0
 margin_right = 1056.0
-margin_bottom = 416.0
+margin_bottom = 512.0
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -51,11 +52,11 @@ __meta__ = {
 
 [node name="RichTextLabel" type="RichTextLabel" parent="BlackOverlay/TextureRect"]
 margin_left = 32.0
-margin_top = 32.0
+margin_top = 96.0
 margin_right = 800.0
-margin_bottom = 160.0
-custom_fonts/normal_font = SubResource( 3 )
-custom_colors/default_color = Color( 0.45098, 0.2, 0.0509804, 1 )
+margin_bottom = 256.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.764706, 0.133333, 0.0705882, 1 )
 bbcode_text = "Prova Prova text text"
 text = "Prova Prova text text"
 __meta__ = {
@@ -63,14 +64,14 @@ __meta__ = {
 }
 
 [node name="Paradise" type="TouchScreenButton" parent="BlackOverlay/TextureRect"]
-position = Vector2( 544, 192 )
-shape = SubResource( 1 )
+position = Vector2( 448, 288 )
+shape = SubResource( 2 )
 
 [node name="PLabel" type="Label" parent="BlackOverlay/TextureRect/Paradise"]
 margin_top = 32.0
-margin_right = 256.0
+margin_right = 352.0
 margin_bottom = 128.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.45098, 0.2, 0.0509804, 1 )
 text = "ojkhk"
 align = 1
@@ -80,12 +81,12 @@ __meta__ = {
 }
 
 [node name="Hell" type="TouchScreenButton" parent="BlackOverlay/TextureRect"]
-position = Vector2( 32, 192 )
-shape = SubResource( 2 )
+position = Vector2( 32, 288 )
+shape = SubResource( 4 )
 
 [node name="hLabel" type="Label" parent="BlackOverlay/TextureRect/Hell"]
 margin_top = 32.0
-margin_right = 256.0
+margin_right = 353.0
 margin_bottom = 128.0
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.45098, 0.2, 0.0509804, 1 )
@@ -95,5 +96,18 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Title" type="Label" parent="BlackOverlay/TextureRect"]
+margin_right = 832.0
+margin_bottom = 96.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.678431, 0.137255, 0.0784314, 1 )
+text = "CHOICE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="BlackOverlay/TextureRect/Paradise" to="." method="_on_Paradise_pressed"]
 [connection signal="pressed" from="BlackOverlay/TextureRect/Hell" to="." method="_on_Hell_pressed"]

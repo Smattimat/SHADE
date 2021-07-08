@@ -10,7 +10,7 @@ func display(var name,var NS,NM):
 	$AnimationPlayer.play("Start")
 	$VideoPlayer.visible=true
 	skipped=false
-	$VideoPlayer.stream=load("res://Asset/Video/"+name)
+	$VideoPlayer.stream=load("res://Dialogue/Videos"+Settings.Language+"/"+name)
 	$VideoPlayer.play()
 	if NoSkip==true:
 		$TouchScreenButton.visible=false

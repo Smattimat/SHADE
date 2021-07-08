@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Objects/SlideMovingPlatform.gd" type="Script" id=1]
-[ext_resource path="res://Asset/InteractableThings/Tile Cosi copy.png" type="Texture" id=2]
+[ext_resource path="res://Asset/InteractableThings/Tile Cosi sciv.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 31.8 )
@@ -15,21 +15,24 @@ script = ExtResource( 1 )
 [node name="SPlatform" type="KinematicBody2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="SPlatform"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.5, 0.25 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SPlatform"]
+scale = Vector2( 1, 0.5 )
 shape = SubResource( 1 )
 
 [node name="StopArea" type="Area2D" parent="SPlatform"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SPlatform/StopArea"]
-position = Vector2( 0, 22 )
+position = Vector2( 0, 12 )
+scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="MoveTween" type="Tween" parent="."]
 repeat = true
 playback_process_mode = 0
 playback/repeat = true
+
 [connection signal="body_entered" from="SPlatform/StopArea" to="." method="_on_StopArea_body_entered"]
 [connection signal="body_exited" from="SPlatform/StopArea" to="." method="_on_StopArea_body_exited"]

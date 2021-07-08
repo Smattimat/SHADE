@@ -7,6 +7,7 @@ var Left=false
 var Jump=false
 
 var hasKey = false
+var hasPhoto = false
 
 var SadSkin= preload("res://Asset/Player & Person/Cubo triste sketch style gg copy.png")
 var AngrySkin = preload("res://Asset/Player & Person/Cubo Cazzo sketch style copy.png")
@@ -67,6 +68,12 @@ func UpdateKey():
 		$Key.visible=true
 	else:
 		$Key.visible=false
+
+func UpdatePhoto():
+	if hasPhoto==true:
+		$Photo.visible=true
+	else:
+		$Photo.visible=false
 	
 # Member variables
 const GRAVITY = 1000.0 # pixels/second/second

@@ -67,6 +67,9 @@ func Start(var N,var NS,NM,CB,CP):
 		$VideoBox.visible=false
 		$DialogueBox.visible=false
 		$ImageBox.display(Dialogue[Dindex].name,NoSkip)
+	elif(Dialogue[Dindex].type=="trigger"):
+		emit_signal("gui_input")
+		_on_next_step()
 	
 
 func _load(var N):
@@ -86,6 +89,7 @@ func _on_next_step():
 	var app=int(Dindex)
 	app+=1
 	Dindex=str(app)
+	$SEffect.play()
 	if(Dialogue.has(Dindex)):
 		if(Dialogue[Dindex].type=="dialogue"):
 			$Choice.visible=false
@@ -112,6 +116,9 @@ func _on_next_step():
 			$VideoBox.visible=false
 			$DialogueBox.visible=false
 			$ImageBox.display(Dialogue[Dindex].name,NoSkip)
+		elif(Dialogue[Dindex].type=="trigger"):
+			emit_signal("gui_input")
+			_on_next_step()
 			
 	else:
 		_on_exit_narration()

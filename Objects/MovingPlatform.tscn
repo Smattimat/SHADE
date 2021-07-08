@@ -16,10 +16,11 @@ script = ExtResource( 1 )
 z_index = 1
 
 [node name="Sprite" type="Sprite" parent="MPlatform"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.5, 0.25 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MPlatform"]
+scale = Vector2( 1, 0.5 )
 shape = SubResource( 1 )
 
 [node name="StopArea" type="Area2D" parent="MPlatform"]
@@ -27,12 +28,14 @@ collision_layer = 16
 collision_mask = 16
 
 [node name="StopCollision" type="CollisionShape2D" parent="MPlatform/StopArea"]
-position = Vector2( 0, 22 )
+position = Vector2( 0, 12 )
+scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="MoveTween" type="Tween" parent="."]
 repeat = true
 playback_process_mode = 0
 playback/repeat = true
+
 [connection signal="body_entered" from="MPlatform/StopArea" to="." method="_on_StopArea_body_entered"]
 [connection signal="body_exited" from="MPlatform/StopArea" to="." method="_on_StopArea_body_exited"]

@@ -25,7 +25,7 @@ var incazed=false
 func _ready():
 	$Sound.pause_mode=Node.PAUSE_MODE_INHERIT
 	_init_tween()	
-	timer.wait_time=0.4
+	timer.wait_time=0.1
 	timer.connect("timeout",self,"GameOver") 
 	add_child(timer)
 
@@ -90,6 +90,7 @@ func _on_AreaKill_body_entered(body):
 			$Sound.play()
 		alive=false
 		$DroneBody/AnimatedSprite.play("Die")
+		
 
 func GameOver():
 	var Screen = get_tree().get_root().get_node("Main").find_node("GameOverScreen")	

@@ -7,6 +7,10 @@ func display(var text,var good,var bad,var id):
 	$BlackOverlay/TextureRect/Hell/hLabel.text=bad
 	$BlackOverlay/TextureRect/Paradise/PLabel.text=good
 	ChoiceID=id
+	if Settings.Language=="UK":
+		$BlackOverlay/TextureRect/Title.text="CHOICE";
+	else:
+		$BlackOverlay/TextureRect/Title.text="SCELTA";
 	
 
 
@@ -14,7 +18,6 @@ func _on_Paradise_pressed():
 	var Main = get_tree().get_root().get_node("Main")
 	Main.ChoicesArray[int(ChoiceID)].Good=true
 	Main.GoodCount=Main.GoodCount+1
-	
 
 
 func _on_Hell_pressed():

@@ -28,6 +28,7 @@ func UpdateVolume():
 		$LevelMusic.volume_db=(Settings.Music_Volume*5)-35
 
 func _ready():
+	$Player/Canvas/HUD/Vignettatura.visible=true
 	$Player/Canvas/HUD/RightBox/Left.connect("pressed",self,"on_left")
 	$Player/Canvas/HUD/RightBox/Left.connect("released",self,"not_on_left")
 	$Player/Canvas/HUD/Box/Jump.connect("pressed",self,"on_jump")
@@ -143,7 +144,7 @@ func _process(delta):
 			diffx=diffx*-1
 		if diffY<0: 
 			diffY=diffY*-1			
-		if diffx<608:
+		if diffx<616:
 			if diffY<330:
 				if(pp.colorazion==colorP):
 					pp.ImitatePlayer(true,Left,Right,Jump)

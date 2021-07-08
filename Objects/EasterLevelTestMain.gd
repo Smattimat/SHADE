@@ -33,6 +33,8 @@ func _ready():
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Options.visible=false
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect.rect_size.y=384
 	
+	$Player/Canvas/HUD/Vignettatura.visible=false
+	
 	
 	$Player/Canvas/HUD/RightBox/Left.connect("pressed",self,"on_left")
 	$Player/Canvas/HUD/RightBox/Left.connect("released",self,"not_on_left")
@@ -59,9 +61,11 @@ func UpdateLanguage():
 	if Settings.Language=="IT":
 		$LLicenses.text="<--Licenze"
 		$LCreditisviluppo.text="Crediti-->"
+		$LCreditisviluppo2.text="Crediti"
 	else:
 		$LLicenses.text="<--Licenses"
 		$LCreditisviluppo.text="Credits-->"
+		$LCreditisviluppo2.text="Credits"
 		
 
 func on_toRetry():

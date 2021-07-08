@@ -31,12 +31,13 @@ func ImitatePlayer(var imitate,var L,var R,var J):
 		Left=false
 		Right=false
 		Jump=false
-		var rest=fmod($KPerson.position.y, 32)
-		if (rest!=0):
-			if(rest<16):
-				$KPerson.position.y=$KPerson.position.y-rest
+		var rest=fposmod(-$KPerson.position.y, 32)
+		if (rest<1  or rest>31):
+			#sistemare
+			if rest>16:
+				$KPerson.position.y=$KPerson.position.y-rest		
 			else:
-				$KPerson.position.y=$KPerson.position.y+(32-rest)
+				$KPerson.position.y=$KPerson.position.y+rest		
 			$KPerson/CollisionShape2D.scale.y=0.99
 			$KPerson.position.y=$KPerson.position.y-0.32
 		

@@ -14,6 +14,7 @@ export var NoMusicVideoBox=false
 export var IsChoiceBased=false
 export var ChoiceId=0
 export var TutorialNote=false
+export var GivesPhoto=false
 var Used=false
 
 var follow = Vector2.ZERO
@@ -46,6 +47,7 @@ func _on_NoteArea_body_entered(body):
 			else:
 				var Dialogue = get_tree().get_root().get_node("Main").find_node("NarrationInterface")
 				Dialogue.visible = true
+				$SEffect.play()
 				if IsChoiceBased==true:
 					var Main = get_tree().get_root().get_node("Main")
 					var c=Main.ChoicesArray[ChoiceId]
@@ -55,6 +57,9 @@ func _on_NoteArea_body_entered(body):
 						Dialogue.Start(DialogueNumber,NoSkip,NoMusicVideoBox,IsChoiceBased,"Bad")	
 				else:			
 					Dialogue.Start(DialogueNumber,NoSkip,NoMusicVideoBox,IsChoiceBased,"a")
+				if GivesPhoto==true:
+					body.hasPhoto=true
+					body.UpdatePhoto()
 				var Right = get_tree().get_root().get_node("Main").find_node("Right")
 				var Left = get_tree().get_root().get_node("Main").find_node("Left")
 				var Jump = get_tree().get_root().get_node("Main").find_node("Jump")

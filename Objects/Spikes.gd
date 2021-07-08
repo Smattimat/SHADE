@@ -3,7 +3,7 @@ extends Node2D
 var timer = Timer.new()
 
 func _ready():
-	timer.wait_time=0.2
+	timer.wait_time=0.1
 	timer.connect("timeout",self,"GameOver") 
 	add_child(timer)
 

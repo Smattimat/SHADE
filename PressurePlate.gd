@@ -38,8 +38,9 @@ func update():
 
 func _on_Area2D_body_entered(body):
 	Counter+=1
-	if Counter>0:
+	if Counter>0 and Pressed==false:
 		update()
+		timer.stop()
 		
 	
 

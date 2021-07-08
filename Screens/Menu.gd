@@ -2,6 +2,7 @@ extends Node
 
 
 func _ready():
+	$Main/Player/Canvas/HUD/Vignettatura.visible=false
 	$Options/ColorRect2.visible=false
 	$AnimationPlayer.play("FadeInMenù")
 	$Options.connect("gui_input",self,"Option_to_Menu")
