@@ -5,7 +5,7 @@
   "4":{"type":"dialogue","name":"Person","Face":"Red","Text":"..."},
   "5":{"type":"dialogue","name":"Player","Face":"Sad","Text":"He is not able to talk..."},
   "6":{"type":"dialogue","name":"Player","Face":"Depre","Text":"What was i thinking when i took part in the creation of this machi-"},
-  "7":{"type":"video","name":"FLASHBACK_2.ogv"},
+  "7":{"type":"video","language":"true","name":"FLASHBACK_2.ogv"},
   "8":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"The doctress... it's true!"},
   "9":{"type":"dialogue","name":"Player","Face":"Angry","Text":"She betrayed all of us!"},
   "10":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Use the colorful button to control your emotions!"}

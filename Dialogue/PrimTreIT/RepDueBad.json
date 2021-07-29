@@ -1,6 +1,6 @@
 {
-  "1" : {"type":"image","name": "Lettera.png" },
-  "2" : {"type":"image","name": "family.jpg" },
+  "1" : {"type":"image","language":"true","name": "Lettera.png" },
+  "2" : {"type":"image","language":"false","name": "family.jpg" },
   "3" : {"type":"dialogue","name": "Player","Face":"Angry","Text":"Niente di utile qui' solo una perdita di tempo..." }
 
   

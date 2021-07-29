@@ -1,6 +1,6 @@
 {
-  "1" : {"type":"image","name": "RapTredCop.png" },
-  "2" : {"type":"image","name": "ReportIncend.png" },
+  "1" : {"type":"image","language":"true","name": "RapTredCop.png" },
+  "2" : {"type":"image","language":"true","name": "ReportIncend.png" },
   "3" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"It seems that no picture is in here... I have to keep searching for it." }
  
 

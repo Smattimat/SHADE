@@ -1,8 +1,8 @@
 {
-  "1" : {"type":"image","name": "RapTredCop.png" },
-  "2" : {"type":"image","name": "ReportIncend.png" },
+  "1" : {"type":"image","language":"true","name": "RapTredCop.png" },
+  "2" : {"type":"image","language":"true","name": "ReportIncend.png" },
   "3" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"... niente di utile... ma aspetta!" },
-  "4" : {"type":"image","name": "map.png" },
+  "4" : {"type":"image","language":"false","name": "map.png" },
   "5" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"Questi devono essere i laboratori..." },
   "6" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Quindi qui deve esserci qualcosa di importante... E se ci fosse l'Arma?! Se cosi' fosse, la Dottoressa dovrebbe essere li'... " },
   "7" : {"type":"dialogue","name": "Player","Face":"Happy","Text":"*risata*... ottimo... OTTIMO! *risata* " },

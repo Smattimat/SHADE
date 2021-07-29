@@ -1,5 +1,5 @@
 {
-  "1" : {"type":"image","name": "appuntidue.png" },
+  "1" : {"type":"image","language":"true","name": "appuntidue.png" },
   "2" : {"type":"dialogue","name": "Player","Face":"Angry","Text":"Quindi... questa non e' la mia vera forma!" },
   "3" : {"type":"dialogue","name": "Player","Face":"Depre","Text":"Ma non sono nemmeno morto... non capisco!" }
 }
