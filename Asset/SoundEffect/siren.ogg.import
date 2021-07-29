@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/siren.ogg-2f13fa611d4977d18ceea43b697f4738.oggstr"
+
+[deps]
+
+source_file="res://Asset/SoundEffect/siren.ogg"
+dest_files=[ "res://.import/siren.ogg-2f13fa611d4977d18ceea43b697f4738.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
