@@ -1,9 +1,12 @@
 extends Control
 
 
-func display(var name,var NS):	
+func display(var name,var NS,LangDep):	
 	self.visible=true
-	$TextureRect/ShownImage.texture=load("res://Dialogue/Images"+Settings.Language+"/"+name)
+	if LangDep=="true":
+		$TextureRect/ShownImage.texture=load("res://Dialogue/Images"+Settings.Language+"/"+name)
+	else:
+		$TextureRect/ShownImage.texture=load("res://Dialogue/Images"+"Common"+"/"+name)
 	$TextureRect/AnimationPlayer.play("Next Hopp")
 
 

@@ -60,13 +60,13 @@ func Start(var N,var NS,NM,CB,CP):
 		$VideoBox.visible=true
 		$DialogueBox.visible=false
 		$ImageBox.visible=false
-		$VideoBox.display(Dialogue[Dindex].name,NoSkip,NoMusic)
+		$VideoBox.display(Dialogue[Dindex].name,NoSkip,NoMusic,Dialogue[Dindex].language)
 	elif(Dialogue[Dindex].type=="image"):
 		$ImageBox.visible=true
 		$Choice.visible=false
 		$VideoBox.visible=false
 		$DialogueBox.visible=false
-		$ImageBox.display(Dialogue[Dindex].name,NoSkip)
+		$ImageBox.display(Dialogue[Dindex].name,NoSkip,Dialogue[Dindex].language)
 	elif(Dialogue[Dindex].type=="trigger"):
 		emit_signal("gui_input")
 		_on_next_step()
@@ -109,13 +109,13 @@ func _on_next_step():
 			$VideoBox.visible=true
 			$DialogueBox.visible=false
 			$ImageBox.visible=false
-			$VideoBox.display(Dialogue[Dindex].name,NoSkip,NoMusic)
+			$VideoBox.display(Dialogue[Dindex].name,NoSkip,NoMusic,Dialogue[Dindex].language)
 		elif(Dialogue[Dindex].type=="image"):
 			$ImageBox.visible=true
 			$Choice.visible=false
 			$VideoBox.visible=false
 			$DialogueBox.visible=false
-			$ImageBox.display(Dialogue[Dindex].name,NoSkip)
+			$ImageBox.display(Dialogue[Dindex].name,NoSkip,Dialogue[Dindex].language)
 		elif(Dialogue[Dindex].type=="trigger"):
 			emit_signal("gui_input")
 			_on_next_step()

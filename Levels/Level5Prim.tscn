@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/WorldComplete.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Objects/Lava.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/Passage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/PressurePlate.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Asset/SoundEffect/siren.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Objects/InvisibleDiaTrigger.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -90,6 +92,9 @@ shader_param/black = Color( 0.223529, 0.827451, 0.360784, 1 )
 [sub_resource type="Animation" id=4]
 resource_name = "gass"
 length = 5.0
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 32, 16 )
 
 [node name="Main" type="Node"]
 script = ExtResource( 4 )
@@ -182,7 +187,7 @@ Lava = false
 [node name="Animatedlava" parent="." instance=ExtResource( 7 )]
 modulate = Color( 1, 1, 1, 0.737255 )
 material = SubResource( 3 )
-position = Vector2( 1216, -192 )
+position = Vector2( 1312, -256 )
 scale = Vector2( 0.750001, 0.75 )
 flip_h = true
 flip_v = true
@@ -285,3 +290,20 @@ anims/gass = SubResource( 4 )
 position = Vector2( 416, 32 )
 ID = 0
 delay = 0.2
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1376, 64 )
+shape = SubResource( 5 )
+
+[node name="Siren" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1408, -96 )
+stream = ExtResource( 10 )
+volume_db = 10.0
+
+[node name="InvisibleDiaTrigger" parent="." instance=ExtResource( 11 )]
+position = Vector2( 288, 0 )
+scale = Vector2( 5, 5 )
+
+[connection signal="body_entered" from="Area2D" to="LevelCommands" method="_on_Area2D_body_entered"]
