@@ -4,13 +4,16 @@ var skipped = false
 var NoSkip
 var NoMusic
 
-func display(var name,var NS,NM):
+func display(var name,var NS,NM,LangDep):
 	NoSkip=NS
 	NoMusic=NM
 	$AnimationPlayer.play("Start")
 	$VideoPlayer.visible=true
 	skipped=false
-	$VideoPlayer.stream=load("res://Dialogue/Videos"+Settings.Language+"/"+name)
+	if LangDep=="true":
+		$VideoPlayer.stream=load("res://Dialogue/Videos"+Settings.Language+"/"+name)
+	else:
+		$VideoPlayer.stream=load("res://Dialogue/Videos"+"Common"+"/"+name)
 	$VideoPlayer.play()
 	if NoSkip==true:
 		$TouchScreenButton.visible=false
