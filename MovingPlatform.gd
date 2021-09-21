@@ -25,13 +25,13 @@ func _physics_process(delta):
 	platform.position = platform.position.linear_interpolate(follow,0.075)
 
 func _on_StopArea_body_entered(body):
-	if body.name=="Player"or body.name=="KPerson":
+	if body.name=="Player"or body.name=="Person":
 		counter+=1
 		tween.stop(self)
 
 
 func _on_StopArea_body_exited(body):
-	if body.name=="Player"or body.name=="KPerson":
+	if body.name=="Player"or body.name=="Person":
 		counter-=1
 		if counter==0:
 			tween.resume(self)
