@@ -1,5 +1,7 @@
 extends Node
 
+var CheckPoint_File= "user://Check.save"
+
 export(String,FILE,"*.tscn")var CurrentScene
 
 var Right=false
@@ -17,6 +19,7 @@ class Choice:
 	var ID: int
 	
 var ChoicesArray=[]
+var CheckAt=0
 
 var GoodCount=0
 var BadCount=0
@@ -42,6 +45,34 @@ func _ready():
 	$Player/Canvas/HUD/Options/Back.connect("pressed",self,"Exit_Options")
 	UpdateVolume()
 	$LevelMusic.play()
+	#carica Checkpoint
+	var f = File.new()
+	if f.file_exists(CheckPoint_File):
+		f.open(CheckPoint_File,File.READ)
+		CheckAt=f.get_var()		
+		f.close()
+		if CheckAt!=0:
+			UpdateCheck()
+	#imposta il layout
+	if(Settings.InvLayout==true):
+		$Player/Canvas/HUD/Box/Jump.position=Vector2(1120 ,704)
+		$Player/Canvas/HUD/Box/Color2.position=Vector2(1152,416)
+		$Player/Canvas/HUD/RightBox/Left.position=Vector2(-672,544)
+		$Player/Canvas/HUD/RightBox/Right.position=Vector2(-480,544)
+	else:
+		$Player/Canvas/HUD/Box/Jump.position=Vector2(0 ,704)
+		$Player/Canvas/HUD/Box/Color2.position=Vector2(32,416)
+		$Player/Canvas/HUD/RightBox/Left.position=Vector2(128,544)
+		$Player/Canvas/HUD/RightBox/Right.position=Vector2(320,544)
+	#imposta suggerienti tutorial
+	var Hints = get_tree().get_nodes_in_group("Hints")
+	if(Settings.SkipTutorial==true):
+		for h in Hints:
+			h.visible=false
+	else:
+		for h in Hints:
+			h.visible=true		
+
 	var i=0
 	while i<ChoiceN:
 		var c = Choice.new()
@@ -50,10 +81,42 @@ func _ready():
 		ChoicesArray.append(c)
 		i=i+1
 		
+		
+	
+		
+func UpdateCheck():
+	if(CheckAt!=0):	
+		print(CheckAt)
+		var Checks=get_tree().get_nodes_in_group("Checks")
+		for c in Checks:
+			if c.Id==CheckAt:
+				$Player.position=c.position
+				break
+			
+			
 func Exit_Options():
 	$Player/Canvas/HUD/Menuino.visible=true
 	$Player/Canvas/HUD/Options.visible=false
 	$Player/Canvas/HUD/Menuino.UpdateLanguage()
+	#aggiorna il layout
+	if(Settings.InvLayout==true):
+		$Player/Canvas/HUD/Box/Jump.position=Vector2(1120 ,704)
+		$Player/Canvas/HUD/Box/Color2.position=Vector2(1152,416)
+		$Player/Canvas/HUD/RightBox/Left.position=Vector2(-672,544)
+		$Player/Canvas/HUD/RightBox/Right.position=Vector2(-480,544)
+	else:
+		$Player/Canvas/HUD/Box/Jump.position=Vector2(0 ,704)
+		$Player/Canvas/HUD/Box/Color2.position=Vector2(32,416)
+		$Player/Canvas/HUD/RightBox/Left.position=Vector2(128,544)
+		$Player/Canvas/HUD/RightBox/Right.position=Vector2(320,544)
+	#aggiorna i suggerimenti tutorial
+	var Hints = get_tree().get_nodes_in_group("Hints")
+	if(Settings.SkipTutorial==true):
+		for h in Hints:
+			h.visible=false
+	else:
+		for h in Hints:
+			h.visible=true		
 	UpdateVolume()
 		
 func on_Options():
@@ -81,6 +144,7 @@ func on_exit():
 		WasColorChange=true
 	else:
 		WasColorChange=false
+		
 	
 	
 func on_resume():
@@ -116,7 +180,7 @@ func on_jump():
 	
 func on_color(var col="Gray"):
 	$Player.UpdateColor(col)
-
+	
 	
 	
 func _process(delta):
@@ -138,14 +202,14 @@ func _process(delta):
 	var LevelPeople=get_tree().get_nodes_in_group("People")
 	$Player.MovePlayer(Left,Right,Jump)
 	for pp in LevelPeople:
-		var diffx=(pp.position.x+pp.get_node("KPerson").position.x)-$Player.position.x
-		var diffY=(pp.position.y+pp.get_node("KPerson").position.y)-$Player.position.y
+		var diffx=pp.position.x-$Player.position.x
+		var diffY=pp.position.y-$Player.position.y
 		if diffx<0: 
 			diffx=diffx*-1
 		if diffY<0: 
 			diffY=diffY*-1			
 		if diffx<616:
-			if diffY<330:
+			if diffY<360:
 				if(pp.colorazion==colorP):
 					pp.ImitatePlayer(true,Left,Right,Jump)
 				else:

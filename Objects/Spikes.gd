@@ -8,7 +8,7 @@ func _ready():
 	add_child(timer)
 
 func _on_Area2D_body_entered(body):
-	if(body.name=="Player" or body.name=="KPerson"):
+	if body.name=="Player" or body.is_in_group("People"):
 		timer.start() 
 		var dialogue = get_tree().get_root().get_node("Main").find_node("DialogueBox")
 		dialogue.visible=false

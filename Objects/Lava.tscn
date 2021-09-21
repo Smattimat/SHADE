@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Asset/Player & Person/DepreL.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Lava.gd" type="Script" id=2]
@@ -8,11 +8,12 @@
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 5 )
-shader_param/OCTAVES = 4
+shader_param/OCTAVES = 5
+shader_param/t = 0.0
 shader_param/red = Color( 0.843137, 0.0627451, 0.0627451, 1 )
 shader_param/yellow = Color( 1, 0.72549, 0, 1 )
-shader_param/grey = Color( 1, 0.960784, 0, 1 )
-shader_param/black = Color( 0.827451, 0, 0, 1 )
+shader_param/grey = Color( 0.92549, 0.219608, 0.0588235, 1 )
+shader_param/black = Color( 0.960784, 0.819608, 0.0431373, 1 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 64, 64 )
@@ -40,8 +41,26 @@ scale = 4.0
 color_ramp = SubResource( 4 )
 hue_variation = -1.0
 
+[sub_resource type="Animation" id=6]
+resource_name = "Shader"
+length = 200.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/t")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 100.9, 200 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 60.0, 0.0 ]
+}
+
 [node name="Lava" type="Sprite"]
 material = SubResource( 1 )
+position = Vector2( 64, 64 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
@@ -68,5 +87,8 @@ amount = 5
 lifetime = 4.0
 visibility_rect = Rect2( -64, -100, 128, 30 )
 process_material = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Shader = SubResource( 6 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -20,3 +20,4 @@ func reapplytoHUD():
 			but.setLocked()
 		else:
 			but.setUnlock()
+	

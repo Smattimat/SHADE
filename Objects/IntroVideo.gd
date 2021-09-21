@@ -1,8 +1,14 @@
 extends Node
 
-func _ready():
+var CheckPoint_File= "user://Check.save"
+
+func _ready():	
 	#Settings.save_Level()  # per resettare opzioni a ogni avvio
-	#Settings.save_Options()	
+	#Settings.save_Options()
+	var f = File.new()
+	f.open(CheckPoint_File,File.WRITE)
+	f.store_var(0)
+	f.close()
 	pass
 
 func _on_VideoPlayer_finished():

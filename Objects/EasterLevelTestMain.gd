@@ -49,6 +49,16 @@ func _ready():
 	$Player/Canvas/HUD/GameOverScreen/BlackOverlay/ColorRect/Retry.connect("pressed",self,"on_toRetry")
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/Retry.connect("pressed",self,"on_toRetry")
 	$LevelMusic.play()
+	if(Settings.InvLayout==true):
+		$Player/Canvas/HUD/Box/Jump.position=Vector2(1120 ,704)
+		$Player/Canvas/HUD/Box/Color2.position=Vector2(1152,416)
+		$Player/Canvas/HUD/RightBox/Left.position=Vector2(-672,544)
+		$Player/Canvas/HUD/RightBox/Right.position=Vector2(-480,544)
+	else:
+		$Player/Canvas/HUD/Box/Jump.position=Vector2(0 ,704)
+		$Player/Canvas/HUD/Box/Color2.position=Vector2(32,416)
+		$Player/Canvas/HUD/RightBox/Left.position=Vector2(128,544)
+		$Player/Canvas/HUD/RightBox/Right.position=Vector2(320,544)
 	var i=0
 	while i<ChoiceN:
 		var c = Choice.new()
@@ -209,6 +219,16 @@ func ActivateLevel():
 	var ActBut=get_tree().get_nodes_in_group("ActButtons")
 	for but in ActBut:
 		but.set_block_signals(true)
+	if(Settings.InvLayout==true):
+		$Player/Canvas/HUD/Box/Jump.position=Vector2(1120 ,704)
+		$Player/Canvas/HUD/Box/Color2.position=Vector2(1152,416)
+		$Player/Canvas/HUD/RightBox/Left.position=Vector2(-672,544)
+		$Player/Canvas/HUD/RightBox/Right.position=Vector2(-480,544)
+	else:
+		$Player/Canvas/HUD/Box/Jump.position=Vector2(0 ,704)
+		$Player/Canvas/HUD/Box/Color2.position=Vector2(32,416)
+		$Player/Canvas/HUD/RightBox/Left.position=Vector2(128,544)
+		$Player/Canvas/HUD/RightBox/Right.position=Vector2(320,544)
 	
 func DeactivateLevel():
 	$Player/Canvas/HUD/Menuino/BlackOvelay/ColorRect/ToMenu.visible=true

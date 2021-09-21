@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Shaders/CircleGlow.shader" type="Shader" id=1]
+[ext_resource path="res://CheckPoint.gd" type="Script" id=2]
+[ext_resource path="res://Asset/InteractableThings/NoteBack.png" type="Texture" id=3]
+[ext_resource path="res://Asset/InteractableThings/CheckPoint.png" type="Texture" id=4]
+[ext_resource path="res://Asset/SoundEffect/Ready.wav" type="AudioStream" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/color = Color( 0, 0.831373, 0.403922, 1 )
+shader_param/speed = 3.479
+shader_param/radius = 0.0
+shader_param/width = 0.784
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Spin"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1e-05, 0.5 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[node name="CheckPoint" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+material = SubResource( 1 )
+position = Vector2( 16, 32 )
+scale = Vector2( 1.25, 1.25 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="MoveTween" type="Tween" parent="."]
+repeat = true
+playback/repeat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Spin = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
+
+[connection signal="body_entered" from="." to="." method="_on_CheckPoint_body_entered"]
