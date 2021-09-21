@@ -37,7 +37,7 @@ __meta__ = {
 margin_left = 256.0
 margin_top = 32.0
 margin_right = 1024.0
-margin_bottom = 544.0
+margin_bottom = 640.0
 color = Color( 0.054902, 0.0431373, 0.129412, 0.784314 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -50,20 +50,20 @@ normal = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="LIT" type="TouchScreenButton" parent="."]
-position = Vector2( 800, 352 )
+position = Vector2( 800, 448 )
 scale = Vector2( 3, 2.66667 )
 normal = ExtResource( 3 )
 
 [node name="LUK" type="TouchScreenButton" parent="."]
-position = Vector2( 640, 352 )
+position = Vector2( 640, 448 )
 scale = Vector2( 3, 2.66667 )
 normal = ExtResource( 4 )
 
 [node name="LLanguage" type="Label" parent="."]
 margin_left = 320.0
-margin_top = 352.0
+margin_top = 448.0
 margin_right = 608.0
-margin_bottom = 416.0
+margin_bottom = 512.0
 custom_fonts/font = ExtResource( 5 )
 text = "Language"
 valign = 1
@@ -85,9 +85,9 @@ __meta__ = {
 
 [node name="LMusic" type="Label" parent="."]
 margin_left = 320.0
-margin_top = 448.0
+margin_top = 544.0
 margin_right = 470.0
-margin_bottom = 512.0
+margin_bottom = 608.0
 custom_fonts/font = ExtResource( 5 )
 text = "Music"
 valign = 1
@@ -97,9 +97,9 @@ __meta__ = {
 
 [node name="Music_Slider" type="HSlider" parent="."]
 margin_left = 640.0
-margin_top = 416.0
+margin_top = 512.0
 margin_right = 896.0
-margin_bottom = 480.0
+margin_bottom = 576.0
 rect_scale = Vector2( 1, 2 )
 max_value = 10.0
 value = 5.0
@@ -110,12 +110,12 @@ __meta__ = {
 }
 
 [node name="Music_UP" type="TouchScreenButton" parent="."]
-position = Vector2( 896, 448 )
+position = Vector2( 896, 544 )
 scale = Vector2( 0.64, 0.64 )
 normal = ExtResource( 7 )
 
 [node name="Music_Down" type="TouchScreenButton" parent="."]
-position = Vector2( 576, 448 )
+position = Vector2( 576, 544 )
 scale = Vector2( 0.64, 0.64 )
 normal = ExtResource( 1 )
 
@@ -153,6 +153,23 @@ position = Vector2( 800, 256 )
 scale = Vector2( 0.67, 0.67 )
 normal = ExtResource( 9 )
 
+[node name="LinvertLay" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 352.0
+margin_right = 770.0
+margin_bottom = 402.0
+custom_fonts/font = ExtResource( 5 )
+text = "Invert commands"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layout" type="TouchScreenButton" parent="."]
+position = Vector2( 800, 352 )
+scale = Vector2( 0.666667, 0.666667 )
+normal = ExtResource( 8 )
+
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="LIT" to="." method="_on_LIT_pressed"]
 [connection signal="pressed" from="LUK" to="." method="_on_LUK_pressed"]
@@ -160,3 +177,4 @@ normal = ExtResource( 9 )
 [connection signal="pressed" from="Music_Down" to="." method="_on_Music_Down_pressed"]
 [connection signal="pressed" from="Skip_T" to="." method="_on_Skip_T_pressed"]
 [connection signal="pressed" from="Particles" to="." method="_on_Particles_pressed"]
+[connection signal="pressed" from="Layout" to="." method="_on_Layout_pressed"]

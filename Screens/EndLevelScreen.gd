@@ -2,6 +2,7 @@ extends Control
 
 var nextScene
 var LevelN
+var CheckPoint_File= "user://Check.save"
 
 func deploy(var next,var lN):
 	nextScene=next
@@ -40,6 +41,11 @@ func _on_Next_pressed():
 	$LoadingScreen.loadScene(nextScene)
 	$BlackOverlay/ColorRect/Next.set_block_signals(true)
 	$BlackOverlay/ColorRect/Exit.set_block_signals(true)
+	var f = File.new()
+	f.open(CheckPoint_File,File.WRITE)
+	f.store_var(0)
+	f.close()
+	
 
 	
 
@@ -48,3 +54,7 @@ func _on_Exit_pressed():
 	$LoadingScreen.loadScene("res://Screens/Menu.tscn")
 	$BlackOverlay/ColorRect/Next.set_block_signals(true)
 	$BlackOverlay/ColorRect/Exit.set_block_signals(true)
+	var f = File.new()
+	f.open(CheckPoint_File,File.WRITE)
+	f.store_var(0)
+	f.close()

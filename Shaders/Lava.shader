@@ -4,6 +4,7 @@ shader_type canvas_item;
 // If you use this shader, I would prefer it if you gave credit to me and my channel
 
 uniform int OCTAVES = 4;
+uniform float t=0;
 
 uniform vec4 red : hint_color;
 uniform vec4 yellow : hint_color;
@@ -11,7 +12,7 @@ uniform vec4 grey : hint_color;
 uniform vec4 black : hint_color;
 
 float rand(vec2 coord){
-	return fract(sin(dot(coord, vec2(56.0934483, 78.3674596)) * 1000.0) * 1000.0);
+	return fract(sin(dot(coord, vec2(56.09483, 78.37596)) * 1000.0) * 1000.0);
 }
 
 float noise(vec2 coord){
@@ -32,7 +33,8 @@ float noise(vec2 coord){
 float fbm(vec2 coord){
 	float value = 0.0;
 	float scale = 0.5;
-
+	
+	
 	for(int i = 0; i < OCTAVES; i++){
 		value += noise(coord) * scale;
 		coord *= 2.0;
@@ -41,11 +43,13 @@ float fbm(vec2 coord){
 	return value;
 }
 
+
 void fragment() {
-	vec2 coord = UV * 10.0;
+	vec2 coord = UV*10.0;
+
 	
-	float noise1 = fbm(coord + vec2(TIME * -0.5, TIME * 0.5));
-	float noise2 = fbm(coord + vec2(0, TIME * -0.5));
+	float noise1 = fbm(coord + vec2(t * -0.5, t * 0.5));
+	float noise2 = fbm(coord + vec2(0, t * -0.5));
 	
 	float combined = noise1 * noise2;
 	

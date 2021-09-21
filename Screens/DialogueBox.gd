@@ -10,7 +10,7 @@ func display(var text,var speaker,var NS):
 	$TextureRect/RichTextLabel.text=text
 	$Speaker.texture=speaker
 	$TextureRect/RichTextLabel.percent_visible=0
-	var duration=text.length()/20
+	var duration=text.length()/24
 	if duration<0.1:
 		duration=0.2
 	$CharTween.interpolate_property($TextureRect/RichTextLabel,"percent_visible",0,1,duration,

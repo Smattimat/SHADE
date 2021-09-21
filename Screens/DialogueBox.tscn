@@ -98,6 +98,7 @@ texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Next hopp" = SubResource( 4 )
+
 [connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
 [connection signal="tween_completed" from="CharTween" to="." method="_on_CharTween_tween_completed"]

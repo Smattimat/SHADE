@@ -875,10 +875,10 @@ normal = ExtResource( 27 )
 [node name="Label" type="Label" parent="."]
 margin_left = 10.0
 margin_top = 672.0
-margin_right = 118029.0
+margin_right = 118009.0
 margin_bottom = 722.0
 custom_fonts/font = SubResource( 4 )
-text = "Version: Demo 0.5.2 (3 levels)"
+text = "Version: Demo 0.5.12 (5 levels)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -921,7 +921,8 @@ texture = ExtResource( 5 )
 [node name="Gioca" type="TouchScreenButton" parent="MenuContainer/VBoxContainer" groups=[
 "ActButtons",
 ]]
-position = Vector2( -192, -136 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -1184, -136 )
 z_index = 1000
 normal = ExtResource( 14 )
 
@@ -935,7 +936,8 @@ normal = ExtResource( 2 )
 [node name="Esci" type="TouchScreenButton" parent="MenuContainer/VBoxContainer" groups=[
 "ActButtons",
 ]]
-position = Vector2( -192, 184 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 736, 184 )
 z_index = 1000
 normal = ExtResource( 6 )
 

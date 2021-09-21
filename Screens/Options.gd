@@ -19,6 +19,10 @@ func _ready():
 		$Particles.normal=Checked
 	else:
 		$Particles.normal=UnChecked
+	if(Settings.InvLayout==true):
+		$Layout.normal=Checked
+	else:
+		$Layout.normal=UnChecked
 	UpdateLanguage()
 
 func _on_Back_pressed():
@@ -33,6 +37,7 @@ func UpdateLanguage():
 		$LMusic.text="Musica"
 		$LTutorial.text="Salta Tutorial"
 		$LParticelle.text="Particelle"
+		$LinvertLay.text="Inverti Comandi"
 	else:
 		$LUK.normal=UK
 		$LIT.normal=IT_B
@@ -40,6 +45,7 @@ func UpdateLanguage():
 		$LMusic.text="Music"
 		$LTutorial.text="Skip Tutorial"
 		$LParticelle.text="Particles"
+		$LinvertLay.text="Invert Layout"
 		
 
 
@@ -93,3 +99,12 @@ func _on_Particles_pressed():
 	else:
 		Settings.Particle=false
 		$Particles.normal=UnChecked
+
+
+func _on_Layout_pressed():
+	if(Settings.InvLayout==false):
+		Settings.InvLayout=true
+		$Layout.normal=Checked
+	else:
+		Settings.InvLayout=false
+		$Layout.normal=UnChecked
