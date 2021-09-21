@@ -8,7 +8,8 @@
   "7":{"type":"video","language":"true","name":"FLASHBACK_2.ogv"},
   "8":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"The doctress... it's true!"},
   "9":{"type":"dialogue","name":"Player","Face":"Angry","Text":"She betrayed all of us!"},
-  "10":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Use the colorful button to control your emotions!"}
+  "10" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"You have unlocked the red color, rage!" },
+  "11":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Use the colorful button to control your emotions!"}
 
 
 }

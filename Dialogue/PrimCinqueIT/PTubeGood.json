@@ -1,0 +1,6 @@
+{
+  "1" : {"type":"dialogue","name": "Person","Face":"Green","Text":"AAAAAAHHHHhhhh... *dolore* *male* " },
+  "2":{"type":"dialogue","name":"Player","Face":"Depre","Text":"... "},
+  "3" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Hai sbloccato il colore blu, tristezza e rimpianto!" },
+  "4" : {"type":"trigger" }
+}

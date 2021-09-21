@@ -1,0 +1,10 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"Ancora tu! ma non dovevamo vederci piu'? "},
+  "2" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Si ma grazie a te mi sono potuto muovere. Ma cosa e' questa sirena?" },
+  "3":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"C'e' una perdita di gas; dobbiamo fare in fretta! "},
+  "4" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Ricordo un'uscita. I primi tre laboratori erano uguali."},
+  "5" : {"type":"dialogue","name": "Person","Face":"Green","Text":"C'e' un condotto che attraversa tutto il laboratorio a sinistra."},
+  "6":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"Ho visto ma l'unico modo per fuggire e' che qualcuno tenga premuto questo pulsante per aprire la porta! "},
+  "7" : {"type":"dialogue","name": "Person","Face":"Green","Text":"..."},
+  "8":{"type":"choice","Text":"Come decidi di agire?","id":"0","good":"Pensate a una soluzione","bad":"Mettilo sul pulsante e salvati"}
+}

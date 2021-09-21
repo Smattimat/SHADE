@@ -1,4 +1,5 @@
 {
-  "1": {"type": "video","language":"true", "name": "introLV1.ogv"},
-  "2":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Utilizza le frecce per muoverti"}   
+  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"ouch che botta! ma cosa e' questo libro?"},
+  "2": {"type": "video","language":"true", "name": "introLV1.ogv"},
+  "3":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Utilizza le frecce per muoverti"}   
 }

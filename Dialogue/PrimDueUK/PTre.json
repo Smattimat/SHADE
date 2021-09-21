@@ -1,0 +1,5 @@
+{
+  "1" : {"type":"image","language":"true","name": "appuntidue.png" },
+  "2" : {"type":"dialogue","name": "Player","Face":"Angry","Text":"So... this is not my real appearance!" },
+  "3" : {"type":"dialogue","name": "Player","Face":"Depre","Text":"But i'm still alive... I don't understand!" }
+}

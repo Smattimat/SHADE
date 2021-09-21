@@ -1,0 +1,10 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"Here there is nothing to press it only me and you... "},
+  "2" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Don't worry..." },
+  "3" : {"type":"dialogue","name": "Person","Face":"Green","Text":"I will... stay here!" },
+  "4" : {"type":"trigger" },
+  "5":{"type":"dialogue","name":"Player","Face":"Depre","Text":"But... "},
+  "6" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Come on! run and go find the doctress!" },
+  "7":{"type":"dialogue","name":"Player","Face":"Depre","Text":"ok...I will"},
+  "8" : {"type":"trigger" }
+}

@@ -1,0 +1,10 @@
+{
+  "1": {"type": "video","language":"false", "name": "FLASHBACK_1.ogv"},
+  "2":{"type":"dialogue","name": "Player","Face":"Surprise","Text":"This... this is me! I wrote all those reports!"},  
+  "3":{"type":"dialogue","name": "Player","Face":"Sad","Text":"..."},
+  "4":{"type":"dialogue","name": "Player","Face":"Sad","Text":"The machine didn't kill those prisoners..."},
+  "5":{"type":"dialogue","name": "Player","Face":"Depre","Text":"We killed them!"},
+  "6":{"type":"dialogue","name": "Player","Face":"Sad","Text":"The tested subjects had lost everithing! Emotions,Feelings..."},
+  "7":{"type":"dialogue","name": "Player","Face":"Depre","Text":"The will to live!"},
+  "8":{"type":"dialogue","name": "Player","Face":"Sad","Text":"That's why they took a so neutral and vague appearance"}
+}

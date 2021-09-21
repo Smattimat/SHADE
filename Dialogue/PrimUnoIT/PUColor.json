@@ -8,7 +8,8 @@
   "7":{"type":"video","language":"true","name":"FLASHBACK_2.ogv"},
   "8":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"La dottoressa... e' vero!"},
   "9":{"type":"dialogue","name":"Player","Face":"Angry","Text":"Lei ci ha traditi! Tutti quanti!"},
-  "10":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Usa il tasto colorato per controllare le tue emozioni"}
+  "10" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Hai sbloccato il colore rosso, rabbia!" },
+  "11":{"type":"dialogue","name":"narrator","Face":"Neutral","Text":"Usa il tasto colorato per controllare le tue emozioni"}
 
 
 }

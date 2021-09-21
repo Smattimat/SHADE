@@ -1,0 +1,10 @@
+{
+  "1": {"type": "video","language":"false", "name": "FLASHBACK_1.ogv"},
+  "2":{"type":"dialogue","name": "Player","Face":"Surprise","Text":"Questo... sono io! Ho scritto io tutti quei rapporti!"},  
+  "3":{"type":"dialogue","name": "Player","Face":"Sad","Text":"..."},
+  "4":{"type":"dialogue","name": "Player","Face":"Sad","Text":"La macchina non ha ucciso quei detenuti..."},
+  "5":{"type":"dialogue","name": "Player","Face":"Depre","Text":"Siamo stati noi a farlo!"},
+  "6":{"type":"dialogue","name": "Player","Face":"Sad","Text":"Le cavie avevano perduto tutto! Sensazioni,emozioni,sentimenti..."},
+  "7":{"type":"dialogue","name": "Player","Face":"Depre","Text":"La voglia di vivere!"},
+  "8":{"type":"dialogue","name": "Player","Face":"Sad","Text":"Ecco perche' hanno assunto una forma cosi' vaga e neutrale"}
+}

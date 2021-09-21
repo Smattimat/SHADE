@@ -1,0 +1,10 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"Qui' attorno non c'e' niente per premerlo al posto nostro... "},
+  "2" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Non ti preoccupare..." },
+  "3" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Ho deciso tu va rimango qui' io!" },
+  "4" : {"type":"trigger" },
+  "5":{"type":"dialogue","name":"Player","Face":"Depre","Text":"Ma... "},
+  "6" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Cosa fai! corri salvati tu e trova la dottoressa!" },
+  "7":{"type":"dialogue","name":"Player","Face":"Depre","Text":"ok...lo faro'"},
+  "8" : {"type":"trigger" }
+}

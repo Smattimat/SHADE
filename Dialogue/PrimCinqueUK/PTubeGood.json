@@ -1,0 +1,6 @@
+{
+  "1" : {"type":"dialogue","name": "Person","Face":"Green","Text":"AAAAAAHHHHhhhh... *pain* *badly* " },
+  "2":{"type":"dialogue","name":"Player","Face":"Depre","Text":"... "},
+  "3" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"Unlocked the blue color,sadness and regret!" },
+  "4" : {"type":"trigger" }
+}

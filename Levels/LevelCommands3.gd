@@ -44,6 +44,8 @@ func HandleSignal():
 	elif signalCounter==2:
 		var Player=get_tree().get_root().get_node("Main").find_node("Player")
 		Player.UpdateColor("Green")
+		UnlockedColors=3
+		reapplytoHUD()
 	elif signalCounter==3:
 		$AnimationPlayer.play("Fuse")
 
@@ -73,8 +75,6 @@ func _on_Area2D_body_entered(body):
 
 func _on_UnlockWithPhoto_body_entered(body):
 	if body.name == "Player"and body.hasPhoto:
-		UnlockedColors=3
-		reapplytoHUD()
 		var Person=get_tree().get_root().get_node("Main").find_node("Encounter")
 		Person.UpdateColor("Green")
 

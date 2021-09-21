@@ -1,0 +1,6 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"This is already the third laboratory... "},
+  "2":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"I didn't remember they were so close"},
+  "3":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"I need to be carefull;here they kept every kind of harmfull substance"},
+  "4":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"And a leak now that the laboratory is abandoned it's likely"}
+}

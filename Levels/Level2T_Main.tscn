@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Objects/Main.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Objects/Spikes.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Asset/Musica/song 3 -primavera-estate.ogg" type="AudioStream" id=9]
 [ext_resource path="res://Objects/Lava.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Note.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -74,7 +75,7 @@ move_to = Vector2( 100, 0 )
 
 [node name="Drone3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2240, 1184 )
-move_to = Vector2( 0, 200 )
+move_to = Vector2( 0, 250 )
 
 [node name="DroneTutorial" parent="." instance=ExtResource( 7 )]
 position = Vector2( -1472, 192 )
@@ -143,13 +144,25 @@ position = Vector2( 3168, 1440 )
 [node name="LavaColl" type="Node" parent="."]
 
 [node name="Lava" parent="LavaColl" instance=ExtResource( 10 )]
-position = Vector2( 416, 1376 )
-scale = Vector2( 2, 2 )
+position = Vector2( 464, 1376 )
+scale = Vector2( 2.75, 2 )
 
 [node name="Lava2" parent="LavaColl" instance=ExtResource( 10 )]
-position = Vector2( 672, 1376 )
-scale = Vector2( 2, 2 )
+position = Vector2( 632, 1376 )
+scale = Vector2( 1.625, 2 )
 
 [node name="Lava3" parent="LavaColl" instance=ExtResource( 10 )]
-position = Vector2( 928, 1376 )
-scale = Vector2( 2, 2 )
+position = Vector2( 864, 1376 )
+scale = Vector2( 2.25, 2 )
+
+[node name="Appunti2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2240, 1408 )
+move_to = Vector2( 0, 20 )
+speed = 0.7
+DialogueNumber = "PTre"
+
+[node name="FlashBianco" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3968, 1152 )
+move_to = Vector2( 0, 20 )
+speed = 0.7
+DialogueNumber = "PFlashBack"

@@ -1,0 +1,8 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Sad","Text":"I'm really sorry... "},
+  "2" : {"type":"trigger" },
+  "3" : {"type":"dialogue","name": "Person","Face":"Green","Text":"But..." },
+  "4":{"type":"dialogue","name":"Player","Face":"Depre","Text":"I've a mission to accomplish!"},
+  "5":{"type":"dialogue","name":"Player","Face":"Depre","Text":"Adios my friend!"},
+  "6" : {"type":"trigger" }
+}

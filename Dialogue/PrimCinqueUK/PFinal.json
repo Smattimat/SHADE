@@ -1,0 +1,10 @@
+{
+  "1":{"type":"dialogue","name":"Player","Face":"Surprise","Text":"You...again! Were we supposed to not see each other any more? "},
+  "2" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Yes; but thanks to you i'm now able to move on my own. But what is this alarm?" },
+  "3":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"There is a gass leakage; we don't have much time! "},
+  "4" : {"type":"dialogue","name": "Person","Face":"Green","Text":"I remember an exit. The first three laboratories where identical."},
+  "5" : {"type":"dialogue","name": "Person","Face":"Green","Text":"On the left there is a duct wich goes in each part of the laboratory."},
+  "6":{"type":"dialogue","name":"Player","Face":"Neutral","Text":"I saw it but the only way to take it is that someone holds this button to open the door! "},
+  "7" : {"type":"dialogue","name": "Person","Face":"Green","Text":"..."},
+  "8":{"type":"choice","Text":"What do you do?","id":"0","good":"Think of a soluiton","bad":"Put him on the button and leave"}
+}

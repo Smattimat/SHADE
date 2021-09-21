@@ -2,7 +2,7 @@
   "1" : {"type":"dialogue","name": "Person","Face":"Green","Text":"Grazie... *pianto*... grazie!" },
   "2" : {"type":"dialogue","name": "Player","Face":"Surprise","Text":"Hai cambiato colore...? E riesci a parlare!" },
   "3" : {"type":"trigger" },
-  "4" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"I due parlano a lungo per cercare di capire cosa sia successo e dove sia la dottoressa..." },
+  "4" : {"type":"dialogue","name": "narrator","Face":"Neutral","Text":"I due parlano a lungo per cercare di capire cosa fosse successo e dove fosse la dottoressa..." },
   "5" : {"type":"dialogue","name": "Player","Face":"Neutral","Text":"Quindi la Dottoressa si trova al sesto Laboratorio..." },
   "6" : {"type":"dialogue","name": "Person","Face":"Green","Text":"O alm-eno cosi' mi s-sembra di ricord-cordare... Pas...ava li' la mag-gior p-parte del su...o te...po." },
   "7" : {"type":"dialogue","name": "Player","Face":"Empathy","Text":"... Molto bene! Grazie, grazie davvero!" },
